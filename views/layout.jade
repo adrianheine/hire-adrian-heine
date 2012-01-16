@@ -1,0 +1,28 @@
+!!! 5
+html(lang='de')
+  head
+    meta(charset='utf-8')
+    title= longTitle
+    link(rel='stylesheet', href='/static/style.css')
+  body
+    header
+      h1
+        a(href='/') Hire Adrian Lang
+    nav.block-band
+      ul
+        - each cap, id in tabs
+          li
+            a.li(href='/#{id}',title='#{cap.longTitle}') #{cap.title}
+    #content !{body}
+    footer.block-band
+      a(href="http://creativecommons.org/licenses/by-sa/3.0/de/",rel="license")
+        img(alt="Creative Commons License",src="//adrianlang.de/media/cc-by-sa-3.0-de-88x31.png",title="Creative Commons Attribution-Share Alike 3.0 Germany License",width='88',height='31')
+      ul
+        li
+          a.li(href="http://validator.w3.org/check/referer",title="HTML5 validation") Valid HTML5
+        li
+          a.li(href="http://jigsaw.w3.org/css-validator/check/referer",title="CSS validation") Valid CSS
+        li
+          a.li(href="//adrianlang.de/id") © 2012 Adrian Lang
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='/static/script.js')

@@ -1,0 +1,144 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #cbf7ba; /*grün 1*/
+    color: #289001; /*grün 5*/
+    font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 1em;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.1666em;
+}
+
+header h1 a {
+    font-family: "Nimbus Mono L", "Courier New", "Courier", monospace;
+    color: #289001; /*grün 5*/
+}
+
+.block-band {
+    background-color: #dafcfa; /*grün x*/
+    padding: 0 10%;
+}
+
+.block-band, .block-band a {
+    color: #dafcfa; /*grün x*/
+}
+
+.block-band ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.block-band li {
+    /* Does not work in IE6&7 and Firefox 2, workaround is easy:
+       https://blog.mozilla.com/webdev/2009/02/20 */
+    display: inline-block;
+}
+
+.block-band li .li {
+    display: block;
+    background-color: #90d0c0; /*grün x*/
+    padding: 0.2em;
+    margin: 8px 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.block-band li .li:focus,
+.block-band li .li:hover {
+    background-color: #28a388; /*grün x*/
+    color: white; /**/
+}
+
+nav li {
+    width: 16.666%;
+    min-width: 7em;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+footer [rel="license"] {
+    margin: 0.5em 0;
+    float: left;
+}
+
+footer [rel="license"] img {
+    border-width: 0;
+    vertical-align: middle;
+}
+
+footer.block-band li {
+    width: 33%;
+    min-width: 9em;
+}
+
+footer.block-band ul {
+    margin-left: 108px;
+}
+
+.tagcloud {
+    list-style: none;
+    line-height: 0.8em;
+    padding: 0;
+}
+
+.tagcloud li {
+    display: inline;
+}
+
+.tagcloud .t1 {
+    font-size: 0.5em;
+}
+.tagcloud .t2 {
+    font-size: 0.65em;
+}
+.tagcloud .t3 {
+    font-size: 0.8em;
+}
+.tagcloud .t4 {
+    font-size: 1.0em;
+}
+.tagcloud .t5 {
+    font-size: 1.2em;
+}
+.tagcloud .t6 {
+    font-size: 1.4em;
+}
+.tagcloud .t7 {
+    font-size: 1.6em;
+}
+
+.tagcloud a:focus,
+.tagcloud a:hover {
+    text-decoration: underline;
+}
+
+.tagcloud {
+    width: 50%;
+    display: inline-block;
+}
+
+#focus {
+    display: inline-block;
+    vertical-align: top;
+}
