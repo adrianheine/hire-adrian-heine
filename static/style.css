@@ -8,19 +8,20 @@ body {
     color: #289001; /*grün 5*/
     font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
     font-size: 18px;
-    line-height: 1.4em;
+    line-height: 1.3333em;
     margin: 0;
     padding: 0;
 }
 
 header {
-    margin: 1em;
+    margin: 1.333em;
 }
 
 header h1 {
     text-align: center;
-    font-size: 3em;
-    line-height: 1.1666em;
+    font-size: 2.6em;
+    line-height: 1em;
+    margin: 0em;
 }
 
 header h1 a {
@@ -93,7 +94,7 @@ footer.block-band li {
 }
 
 footer.block-band ul {
-    margin-left: 108px;
+    margin-left: 102px;
 }
 
 .tagcloud {
