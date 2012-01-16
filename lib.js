@@ -1,3 +1,5 @@
+module.exports = require('underscore');
+
 module.exports.longTitle = function (tab, title) {
     return 'Hire Adrian Lang | ' + tab + (title ? ' | ' + title : '');
 };

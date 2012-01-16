@@ -5,7 +5,6 @@
  */
 
 var express = require('express'),
-    _ = require('underscore'),
     lib = require('./lib');
 
 var app = module.exports = express.createServer();
@@ -28,7 +27,7 @@ app.configure('production', function () {
 });
 
 // Routes
-var tabs = _.reduce(['Intro', 'Skills'], function (obj, tab) {
+var tabs = lib.reduce(['Intro', 'Skills'], function (obj, tab) {
     var tabid = tab.toLowerCase();
     obj[tabid] = {
         title: tab,
