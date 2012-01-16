@@ -55,6 +55,7 @@
         $('#content').delegate('.tagcloud a', 'click', switchTo);
         $('nav').delegate('a', 'click', switchTo);
 
-        history.replaceState({url: document.location.pathname + '', title: document.title + ''});
+        history.replaceState({url: document.location.pathname + '', title: document.title + ''},
+                             document.title + '');
     });
 }());
