@@ -40,20 +40,18 @@
     };
 
     $(function () {
-        var switchTo = function (e) {
+        $(document.body).on('click', 'a', function (e) {
             var $this = $(this),
-                suburl = $this.attr('href'),
-                subtitle = $this.attr('title');
-            if (e.ctrlKey || e.shiftKey || e.altKey) {
+                url = $this.attr('href'),
+                title = $this.attr('title');
+            if (e.ctrlKey || e.shiftKey || e.altKey ||
+                url.substr(0, 1) !== '/') {
                 return;
             }
-            load(suburl, subtitle);
-            history.pushState({url: suburl, title: subtitle}, subtitle, suburl);
+            load(url, title);
+            history.pushState({url: url, title: title}, title, url);
             e.preventDefault();
-        };
-
-        $('#content').delegate('.tagcloud a', 'click', switchTo);
-        $('nav').delegate('a', 'click', switchTo);
+        });
 
         history.replaceState({url: document.location.pathname + '', title: document.title + ''},
                              document.title + '');
