@@ -1,7 +1,9 @@
 ul.tagcloud
   - each opts, skill in tabs[cur_t].subs
     li(class='t#{opts.score}')
-      a(href='/skills/#{skill}',title='Hire Adrian Lang | Skills | #{opts.title}') #{opts.title}
+      a(href='/skills/#{skill}',title='Hire Adrian Lang | Skills | #{opts.title}')
+        - // This is probably a dirty hack
+        - buf.push(opts.title.replace(' ', '&nbsp;'))
       | 
 #focus
     include skills_sub
