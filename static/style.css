@@ -74,8 +74,17 @@ nav li {
 
 #content {
     width: 80%;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 0;
+}
+
+#content a {
+    color: #28a388;
+}
+
+#content a:focus,
+#content a:hover {
+    color: #90d0c0;
 }
 
 footer [rel="license"] {
@@ -99,8 +108,9 @@ footer.block-band ul {
 
 .tagcloud {
     list-style: none;
-    line-height: 0.8em;
     padding: 0;
+    text-align: justify;
+    line-height: 1em;
 }
 
 .tagcloud li {
@@ -108,7 +118,7 @@ footer.block-band ul {
 }
 
 .tagcloud .t1 {
-    font-size: 0.5em;
+    font-size: 0.6em;
 }
 .tagcloud .t2 {
     font-size: 0.65em;
@@ -126,20 +136,27 @@ footer.block-band ul {
     font-size: 1.4em;
 }
 .tagcloud .t7 {
-    font-size: 1.6em;
-}
-
-.tagcloud a:focus,
-.tagcloud a:hover {
-    text-decoration: underline;
+    font-size: 1.8em;
 }
 
 .tagcloud {
-    width: 50%;
+    width: 48%;
     display: inline-block;
+}
+
+#content .tagcloud a {
+    color: inherit;
+}
+
+#content .tagcloud a:focus,
+#content .tagcloud a:hover {
+    text-decoration: underline;
 }
 
 #focus {
     display: inline-block;
     vertical-align: top;
+    width: 48%;
+    margin-left: 4%;
+    text-align: justify;
 }
