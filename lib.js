@@ -7,3 +7,8 @@ module.exports.longTitle = function (tab, title) {
 module.exports.mimeType = function (subtype) {
     return 'application/prs.de.adrianlang.hire.' + subtype;
 };
+
+module.exports.htmlEntities = function (str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
