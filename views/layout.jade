@@ -11,8 +11,9 @@ html(lang='de')
     nav.block-band
       ul
         - each cap, id in tabs
+          - className = 'li' + (id === cur_t ? ' active' : '')
           li
-            a.li(href='/#{id}',title='#{cap.longTitle}') #{cap.title}
+            a(href='/#{id}',title='#{cap.longTitle}',class=className) #{cap.title}
     #content !{body}
     footer.block-band
       a(href="http://creativecommons.org/licenses/by-sa/3.0/de/",rel="license")

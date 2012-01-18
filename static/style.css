@@ -68,8 +68,25 @@ header h1 a {
 }
 
 nav li {
-    width: 16.666%;
+    width: 20%;
     min-width: 7em;
+}
+
+nav.block-band a.active,
+nav.block-band a.active:hover,
+nav.block-band a.active:focus {
+/*
+    padding-bottom: 9px;
+    border-bottom: 8px solid #CBF7BA;
+    color: #289001;
+    background-color: #CBF7BA;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-top: 1px solid #999;
+    margin-bottom: -5px;
+*/
+    color: #289001;
+    background-color: #CBF7BA;
 }
 
 #content {
@@ -88,7 +105,7 @@ nav li {
 }
 
 footer [rel="license"] {
-    margin: 0.5em 0;
+    margin: 8px 10px;
     float: left;
 }
 
@@ -99,7 +116,7 @@ footer [rel="license"] img {
 
 footer.block-band li {
     width: 33%;
-    min-width: 9em;
+    min-width: 12em;
 }
 
 footer.block-band ul {
@@ -118,10 +135,10 @@ footer.block-band ul {
 }
 
 .tagcloud .t1 {
-    font-size: 0.6em;
+    font-size: 0.5em;
 }
 .tagcloud .t2 {
-    font-size: 0.65em;
+    font-size: 0.6em;
 }
 .tagcloud .t3 {
     font-size: 0.8em;

@@ -1,5 +1,19 @@
 var lib = require('./lib'),
-    skillTitle = lib.longTitle.bind(undefined, 'Skills');
+    linkTo = function (tab, sub, txt) {
+        if (typeof txt === 'undefined') {
+            if (typeof sub === 'undefined') {
+                sub = tab;
+                txt = sub;
+            } else {
+                txt = sub;
+                sub = tab;
+            }
+            tab = 'Skills';
+        }
+        return '<a href="/' + lib.html(lib.id(tab)) + '/' + lib.html(lib.id(sub))+ '" ' +
+                 'title="' + lib.html(lib.longTitle(tab, sub)) + '">' + lib.html(txt) +
+               '</a>';
+    };
 
 /*
  * 1 +
@@ -7,9 +21,10 @@ var lib = require('./lib'),
  * Depth of usage (3) (Barely, Sorta normal usecase, Quite some diggin, Wizardry)
  * Hipness (1) (Whatever, Paint it big!)
  */
-var skills = { 'Apache': {score: 1 + 2 + 1}, // 4 (3)
+var skills = { 'Apache': {score: 1 + 2 + 1,
+                          desc: 'Apache has been my first choice for web servers for several years. Lately, I started investigating ' + linkTo('nginx') + ' as well.</p><p>I successfully deployed web applications with Apache using ' + linkTo('PHP', 'mod_php') + ', ' + linkTo('fcgid', 'mod_fcgid') + ' and ' + linkTo('Ruby on Rails', 'mod_passenger') + '.'}, // 4 (3)
   'Atmel': {score: 1 + 0 + 0, // 1 (1)
-        },
+            desc: ''},
   'C': {score: 1 + 1 + 2, // 4 (3)
         },
   'C++': {score: 1 + 1 + 1, // 3 (1)
@@ -25,10 +40,13 @@ var skills = { 'Apache': {score: 1 + 2 + 1}, // 4 (3)
   'DIME': {score: 1 + 0 + 0 // 1 (1)
         },
   'DokuWiki': {score: 1 + 2 + 3, // 6 (4)
-               desc: 'I am a DokuWiki core developer, contributed a big bunch of plugins and have extensive experience running and customizing DokuWiki.'},
+               desc: 'I am a DokuWiki core developer, contributed a big bunch of plugins and have extensive experience running and customizing DokuWiki.</p><p>In the last year, I put much work into the migration from our plain-DOM JavaScript codebase to ' + linkTo('jQuery', 'jQuery-based') + ' code, including ' + linkTo('jQuery UI') + '.'},
   'Dovecot': {score: 1 + 1 + 1, // 3 (2)
-              desc: 'Dovecot together with <a href="/skills/postfix" title="' + lib.htmlEntities(skillTitle('Postfix')) + '">Postfix</a> powers my self-administered mail server used by a small handful of people.'},
+              desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'},
+  'Etherpad lite': {score: 1 + 1 + 2, // 4
+                   },
   'Express': {score: 1 + 2 + 1, // 4 (4)
+              desc: 'I used the ' + linkTo('NodeJS') + ' web framework Express for two sites: ' + linkTo('Examples', 'Hire Adrian Lang', 'This one') + ' and a relaunch for Piratenkompass, ' + linkTo('Etherpad lite')
         },
   'fcgid': {score: 1 + 1 + 0, // 2 (1)
         },
@@ -39,20 +57,25 @@ var skills = { 'Apache': {score: 1 + 2 + 1}, // 4 (3)
   'GNU/Linux': {score: 1 + 2 + 1, // 4 (3)
           },
   'Haskell': {score: 1 + 1 + 0, // 2 (2)
+              desc: 'PrjEuler, papers'
              },
   'HTML': {score: 1 + 2 + 2, // 5 (5)
           },
+  'HTML5': {score: 1 + 1 + 1, // 3
+           },
   'Jade': {score: 1 + 2 + 2, // 5 (4)
           },
   'Java': {score: 1 + 0 + 2, // 3 (2)
           },
   'JavaScript': {score: 1 + 2 + 3 + 1, // 7 (7)
-                 desc: 'I love JavaScript for its ubiquity and flexibility. I use it for server- and client-side web programming and for scripting, occasionally, but I’ve done desktop programming with <a href="/skills/titanium" title="' + lib.htmlEntities(skillTitle('Titanium')) + '">Titanium Appcelerator</a> as well.'},
+                 desc: 'I love JavaScript for its ubiquity and flexibility. I use it for server- and client-side web programming and for scripting, occasionally, but I’ve done desktop programming with ' + linkTo('Titanium', 'Titanium Appcelerator') + ' as well.'},
   'JVM': {score: 1 + 0 + 2, // 3 (2)
          },
   'jQuery': {score: 1 + 2 + 2, // 5 (6)
              desc: 'jQuery UI, DokuWiki, Titanium'
             },
+  'jQuery UI': {score: 1 + 1 + 1, // 3
+               },
   'Kohana': {score: 1 + 1 + 1, // 3 (1)
             },
   'LaTeX': {score: 1 + 1 + 2, // 4 (3)
@@ -82,10 +105,11 @@ var skills = { 'Apache': {score: 1 + 2 + 1}, // 4 (3)
   'OTRS': {score: 1 + 1 + 1, // 3 (1)
           },
   'PHP': {score: 1 + 2 + 3, // 6 (5)
+          desc: linkTo('StatusNet') + ', ' + linkTo('DokuWiki')
          },
   'Postfix': {score: 1 + 1 + 1, // 3 (2)
              },
-  'RegExp': {score: 1 + 2 + 3, // 6 (4)
+  'RegExp': {score: 1 + 2 + 2, // 5 (4)
             },
   'Ruby': {score: 1 + 0 + 1, // 2 (1)
           },
@@ -100,6 +124,8 @@ var skills = { 'Apache': {score: 1 + 2 + 1}, // 4 (3)
   'SOAP': {score: 1 + 0 + 2, // 3 (2)
           },
   'Solaris': {score: 1 + 0 + 0, // 1 (1)
+          },
+  'StatusNet': {score: 1 + 0 + 2, // 3
           },
   'SQL': {score: 1 + 1 + 1, // 3 (-)
          },
@@ -133,11 +159,11 @@ module.exports = {};
 
 for (var skill in skills) {
     if (skills.hasOwnProperty(skill)) {
-        module.exports[skill.toLowerCase().replace(/ /g, '_').replace(/\//g, '-')] = {
+        module.exports[lib.id(skill)] = {
             score: skills[skill].score,
             desc: skills[skill].desc,
             title: skill,
-            longTitle: skillTitle(skill)
+            longTitle: lib.longTitle('Skills', skill)
         };
     }
 }

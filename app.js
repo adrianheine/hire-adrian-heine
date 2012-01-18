@@ -27,7 +27,7 @@ app.configure('production', function () {
 });
 
 // Routes
-var tabs = lib.reduce(['Intro', 'Skills'], function (obj, tab) {
+var tabs = lib.reduce(['Intro', 'Skills', 'Examples', 'CV', 'Contact'], function (obj, tab) {
     var tabid = tab.toLowerCase();
     obj[tabid] = {
         title: tab,
