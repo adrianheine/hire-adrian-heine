@@ -58,7 +58,7 @@ header h1 a {
 .block-band li .li {
     display: block;
     background-color: #90d0c0; /*grün x*/
-    padding: 0.2em;
+    padding: 4px;
     margin: 8px 10px;
     text-align: center;
     font-size: 1.2em;
@@ -123,8 +123,8 @@ footer [rel="license"] img {
 }
 
 footer.block-band li {
-    width: 33%;
-    min-width: 12em;
+    width: 25%;
+    min-width: 14em;
 }
 
 footer.block-band ul {
@@ -186,16 +186,29 @@ footer.block-band ul {
     margin: 1em 0;
 }
 
-.github {
+.focus-link {
     float: right;
+}
+
+.github {
     background: url(/static/github.ico) no-repeat 0px 3px;
     padding-left: 20px;
 }
 
 .gitorious {
-    float: right;
     background: url(/static/gitorious.ico) no-repeat 0px 3px;
     padding-left: 20px;
+}
+
+footer.block-band li .github {
+    background-position: 40px 8px;
+    padding-left: 20px;
+}
+
+footer .hal {
+    font-family: "Nimbus Mono L", "Courier New", "Courier", monospace;
+    font-weight: bold;
+    color: #289001;
 }
 
 @media only screen and (max-width: 768px) {
