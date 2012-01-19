@@ -15,7 +15,7 @@ app.configure(function () {
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
     app.use(express.favicon(__dirname + '/favicon.ico'));
-    app.use('/static', express['static'](__dirname + '/static'));
+    app.use('/static', express['static'](__dirname + '/static', {maxAge: 1000 * 60 * 60 * 24 * 365}));
     app.use(express.logger('[:date] ":url" :status ":referrer" ":user-agent"'));
     app.use(app.router);
 });
