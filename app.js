@@ -71,5 +71,5 @@ app.get('/:tab?/:sub?', function (req, res, next) {
                 layout: !fragment});
 });
 
-app.listen(3000);
+app.listen(9002, '127.0.0.1');
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
