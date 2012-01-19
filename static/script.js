@@ -20,14 +20,18 @@
         }
 
         $.ajaxSetup({headers: {'Accept': mime}});
-        $target.load(url);
+        $target.load(url, function (responseText, textStatus) {
+            if (textStatus !== 'success' && textStatus !==  'notmodified') {
+                return;
+            }
 
-        if (title) {
-            document.title = title;
-        }
+            if (title) {
+                document.title = title;
+            }
 
-        $('nav a.active').removeClass('active');
-        $('a[href="/' + url_parsed[1] + '"]').addClass('active');
+            $('nav a.active').removeClass('active');
+            $('a[href="/' + url_parsed[1] + '"]').addClass('active');
+        });
 
         return true;
     }
