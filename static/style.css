@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    margin: 1.333em;
+    margin: 1.333em 0.666em;
 }
 
 header h1 {
@@ -27,6 +27,10 @@ header h1 {
 header h1 a {
     font-family: "Nimbus Mono L", "Courier New", "Courier", monospace;
     color: #289001; /*grün 5*/
+}
+
+.group {
+    display: inline-block;
 }
 
 .block-band {
@@ -171,10 +175,8 @@ footer.block-band ul {
 }
 
 #focus {
-    display: inline-block;
-    vertical-align: top;
+    float: right;
     width: 48%;
-    margin-left: 4%;
     text-align: justify;
 }
 
@@ -188,3 +190,26 @@ footer.block-band ul {
     float: right;
     background: url(/static/gitorious.ico) no-repeat 0px 3px;
     padding-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #focus {
+        float: none;
+        width: auto;
+    }
+
+    .focussable {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #content {
+        margin: 1em;
+        width: auto;
+    }
+
+    .block-band {
+        padding: 0;
+    }
+}

@@ -1,3 +1,5 @@
+#focus
+    include examples_sub
 ul.focussable
   - each opts, example in tabs[cur_t].subs
     li
@@ -5,5 +7,3 @@ ul.focussable
         - // This is probably a dirty hack
         - buf.push(opts.title.replace(' ', '&nbsp;'))
       | 
-#focus
-    include examples_sub
