@@ -10,7 +10,7 @@
         if (!url_parsed) {
             return false;
         }
-        if (url_parsed[2]) {
+        if (url_parsed[2] && document.location.pathname.indexOf('/' + url_parsed[2]) === 0) {
             $target = $('#focus');
             mime = 'application/prs.de.adrianlang.hire.focus';
         }
