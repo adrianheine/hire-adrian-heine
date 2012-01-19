@@ -11,7 +11,7 @@ var lib = require('./lib'),
             links: {github: 'adrianlang/partial-js'}
         },
         'libomb': {
-            desc: 'Summer 2009',
+            desc: 'libomb is a ' + linkTo(['Skills', 'PHP']) + ' library implementing the ' + linkTo(['Skills', 'OpenMicroBlogging'], 'OpenMicroBlogging protocol') + '. I wrote it in Summer 2009 and used it to replace the self-baked OMB implementation in ' + linkTo(['Skills', 'StatusNet']) + '.',
             links: {gitorious: 'libomb'}
         }
     };

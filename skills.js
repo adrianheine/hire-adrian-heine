@@ -58,7 +58,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'JVM': {score: 1 + 0 + 2, // 3 (2)
          },
   'jQuery': {score: 1 + 2 + 2, // 5 (6)
-             desc: 'jQuery UI, DokuWiki, Titanium'
+             desc: 'jQuery UI, DokuWiki, Titanium' + linkTo(['Examples', 'Hire Adrian Lang'])
             },
   'jQuery UI': {score: 1 + 1 + 1, // 3
                },
@@ -84,14 +84,14 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
           },
   'OAuth': {score: 1 + 0 + 2, // 3 (3)
           },
-  'OMB': {score: 1 + 0 + 3, // 4 (2)
+  'OpenMicroBlogging': {score: 1 + 0 + 3, // 4 (2)
           },
   'OpenID': {score: 1 + 1 + 1, // 3 (2)
           },
   'OTRS': {score: 1 + 1 + 1, // 3 (1)
           },
   'PHP': {score: 1 + 2 + 3, // 6 (5)
-          desc: linkTo('StatusNet') + ', ' + linkTo('DokuWiki')
+          desc: linkTo('StatusNet') + ', ' + linkTo('DokuWiki') + linkTo(['Examples', 'libomb'])
          },
   'Postfix': {score: 1 + 1 + 1, // 3 (2)
              },
