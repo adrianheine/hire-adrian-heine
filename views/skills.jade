@@ -1,4 +1,4 @@
-ul.tagcloud
+ul.tagcloud.focussable
   - each opts, skill in tabs[cur_t].subs
     li(class='t#{opts.score}')
       a(href='/skills/#{skill}',title='Hire Adrian Lang | Skills | #{opts.title}')

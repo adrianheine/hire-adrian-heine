@@ -125,7 +125,6 @@ footer.block-band ul {
 
 .tagcloud {
     list-style: none;
-    padding: 0;
     text-align: justify;
     line-height: 1em;
 }
@@ -156,9 +155,10 @@ footer.block-band ul {
     font-size: 1.8em;
 }
 
-.tagcloud {
+.focussable {
     width: 48%;
     display: inline-block;
+    padding: 0;
 }
 
 #content .tagcloud a {
@@ -177,3 +177,14 @@ footer.block-band ul {
     margin-left: 4%;
     text-align: justify;
 }
+
+.github {
+    float: right;
+    background: url(/static/github.ico) no-repeat 0px 3px;
+    padding-left: 20px;
+}
+
+.gitorious {
+    float: right;
+    background: url(/static/gitorious.ico) no-repeat 0px 3px;
+    padding-left: 20px;
