@@ -95,7 +95,7 @@ nav.block-band a.active:focus {
 
 #content {
     width: 80%;
-    margin: 1em auto;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -106,6 +106,10 @@ nav.block-band a.active:focus {
 #content a:focus,
 #content a:hover {
     color: #90d0c0;
+}
+
+footer {
+    clear: both;
 }
 
 footer [rel="license"] {
@@ -163,6 +167,7 @@ footer.block-band ul {
     width: 48%;
     display: inline-block;
     padding: 0;
+    margin: 1em 0;
 }
 
 #content .tagcloud a {
@@ -178,6 +183,7 @@ footer.block-band ul {
     float: right;
     width: 48%;
     text-align: justify;
+    margin: 1em 0;
 }
 
 .github {
