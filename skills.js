@@ -1,19 +1,5 @@
 var lib = require('./lib'),
-    linkTo = function (tab, sub, txt) {
-        if (typeof txt === 'undefined') {
-            if (typeof sub === 'undefined') {
-                sub = tab;
-                txt = sub;
-            } else {
-                txt = sub;
-                sub = tab;
-            }
-            tab = 'Skills';
-        }
-        return '<a href="/' + lib.html(lib.id(tab)) + '/' + lib.html(lib.id(sub))+ '" ' +
-                 'title="' + lib.html(lib.longTitle(tab, sub)) + '">' + lib.html(txt) +
-               '</a>';
-    };
+    linkTo = lib.linkTo.bind(undefined, 'Skills');
 
 /*
  * 1 +
@@ -46,7 +32,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'Etherpad lite': {score: 1 + 1 + 2, // 4
                    },
   'Express': {score: 1 + 2 + 1, // 4 (4)
-              desc: 'I used the ' + linkTo('NodeJS') + ' web framework Express for two sites: ' + linkTo('Examples', 'Hire Adrian Lang', 'This one') + ' and a relaunch for Piratenkompass, ' + linkTo('Etherpad lite')
+              desc: 'I used the ' + linkTo('NodeJS') + ' web framework Express for two sites: ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This one') + ' and a relaunch for Piratenkompass, ' + linkTo('Etherpad lite')
         },
   'fcgid': {score: 1 + 1 + 0, // 2 (1)
         },
