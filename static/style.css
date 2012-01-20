@@ -200,6 +200,14 @@ footer.block-band ul {
     padding-left: 20px;
 }
 
+.closing {
+    padding-left: 1em;
+}
+
+.fn {
+    font-size: 0.8em;
+}
+
 footer.block-band li .github {
     background-position: 2px 4px;
 }

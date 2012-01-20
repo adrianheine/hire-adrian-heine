@@ -68,6 +68,7 @@ app.get('/:tab?/:sub?', function (req, res, next) {
     res.render(cur_t + (fragment === 'focus' && sub ? '_sub' : ''),
                {tabs: tabs, cur_t: cur_t, sub: sub,
                 longTitle: sub ? tabs[cur_t].subs[sub].longTitle : tabs[cur_t].longTitle,
+                linkTo: lib.linkTo.bind(undefined, tabs[cur_t].title),
                 layout: !fragment});
 });
 

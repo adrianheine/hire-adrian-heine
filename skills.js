@@ -49,6 +49,8 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
           },
   'HTML5': {score: 1 + 1 + 1, // 3
            },
+  'HTTP': {score: 1 + 2 + 1, // 4
+          },
   'Jade': {score: 1 + 2 + 2, // 5 (4)
           },
   'Java': {score: 1 + 0 + 2, // 3 (2)
