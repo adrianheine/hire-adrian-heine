@@ -147,7 +147,7 @@ for (var skill in skills) {
     if (skills.hasOwnProperty(skill)) {
         module.exports[lib.id(skill)] = {
             score: skills[skill].score,
-            desc: skills[skill].desc,
+            desc: skills[skill].desc || 'No description yet, sorry.',
             title: skill,
             longTitle: lib.longTitle('Skills', skill)
         };
