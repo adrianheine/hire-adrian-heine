@@ -10,17 +10,21 @@ var lib = require('./lib'),
 var skills = { 'Apache': {score: 1 + 2 + 1,
                           desc: 'Apache has been my first choice for web servers for several years. Lately, I started investigating ' + linkTo('nginx') + ' as well.</p><p>I successfully deployed web applications with Apache using ' + linkTo('PHP', 'mod_php') + ', ' + linkTo('fcgid', 'mod_fcgid') + ' and ' + linkTo('Ruby on Rails', 'mod_passenger') + '.'}, // 4 (3)
   'Atmel': {score: 1 + 0 + 0, // 1 (1)
-            desc: ''},
+            desc: 'During my studies I made several contributions to a ' + linkTo('C', 'C-based') + ' ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting Atmel systems.'},
   'C': {score: 1 + 1 + 2, // 4 (3)
-        },
+        desc: ''
+       },
   'C++': {score: 1 + 1 + 1, // 3 (1)
-        },
+          desc: ''
+         },
   'CSS': {score: 1 + 2 + 1, // 4 (4)
         },
   'darcs': {score: 1 + 1 + 0, // 2 (2)
-        },
+            desc: 'When I started contributing to ' + linkTo('DokuWiki') + ', it used darcs as a revision control system, but soon changed to ' + linkTo('git') + '.'
+           },
   'DB2': {score: 1 + 1 + 0, // 2 (1)
-        },
+          desc: ''
+         },
   'Debian': {score: 1 + 2 + 2, // 5 (4)
              desc: 'Debian GNU/Linux is the only operating system I use extensively. It powers my workstation, netbook and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice.'},
   'DIME': {score: 1 + 0 + 0 // 1 (1)
@@ -47,30 +51,37 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
               desc: 'PrjEuler, papers'
              },
   'HTML': {score: 1 + 2 + 2, // 5 (5)
+           desc: 'HTML is part of my everyday work. I like my HTML clean, semantic and valid. That’s why I’m hoping for ' + linkTo('HTML5') + ' goodness.'
           },
   'HTML5': {score: 1 + 1 + 1, // 3
+            desc: 'In ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used a HTML5 template and explored the new history API.'
            },
   'HTTP': {score: 1 + 2 + 1, // 4
+           desc: 'My first experience with HTML was when I used ' + linkTo('SOAP') + '. Since then, I pity the current state of HTTP usage as barely more than a stupid URL retrieving or data posting protocol. Lately, I started to like REST and its intensive use of HTTP features.'
           },
   'Jade': {score: 1 + 2 + 2, // 5 (4)
            desc: 'I use Jade in my ' + linkTo('Node.js') + ' web applications together with ' + linkTo('Express') + '. I even got a <a href="https://github.com/visionmedia/jade/commit/bef63b3ebadfcbf2b079831e58d3b959123bd5ce" title=">small patch</a> landed.'
           },
   'Java': {score: 1 + 0 + 2, // 3 (2)
+           desc: 'During my studies I made big contributions to a ' + linkTo('JVM') + ' targetting embedded systems. Among other changes, I reviewed and implemented big parts of the Java standard library. Since then I did not do any bigger Java coding.'
           },
   'JavaScript': {score: 1 + 2 + 3 + 1, // 7 (7)
                  desc: 'I love JavaScript for its ubiquity and flexibility. I use it for server- and client-side web programming and for scripting, occasionally, but I’ve done desktop programming with ' + linkTo('Titanium', 'Titanium Appcelerator') + ' as well.'},
   'JVM': {score: 1 + 0 + 2, // 3 (2)
+          desc: 'During my studies I made big contributions to a ' + linkTo('C', 'C-based') + ' JVM targetting embedded systems. For this work I read the whole JVM Spec several times.'
          },
   'jQuery': {score: 1 + 2 + 2, // 5 (6)
              desc: 'I use jQuery for all my client-side JavaScript needs. Last year, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. On ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', jQuery is used for DOM manipulation and XHRs.'
             },
   'jQuery UI': {score: 1 + 1 + 1, // 3
+                desc: linkTo('DokuWiki', 'DokuWiki’s') + ' new ' + linkTo('JavaScript') + ' code uses jQuery UI for some elements.'
                },
   'Kohana': {score: 1 + 1 + 1, // 3 (1)
             },
   'LaTeX': {score: 1 + 1 + 2, // 4 (3)
             desc: 'I write all my paperwork and presentations in LaTeX.'},
   'LDAP': {score: 1 + 1 + 1, // 3 (3)
+           desc: 'I run LDAP on one of my servers and have some experience using the service.'
           },
   'MacOS X': {score: 1 + 1 + 0, // 2 (2)
           },
@@ -99,8 +110,10 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
           desc: 'Probably most of my software development experience comes from my work with PHP. In 2009, I wrote the library ' + linkTo(['Examples', 'libomb']) + ' for the microblogging software ' + linkTo('StatusNet') + '.</p><p>For the last two years, my full-time job was focused on ' + linkTo('DokuWiki') + ' – core contributions, templates and plugins.</p><p>Moreover, I took a look at ' + linkTo('Kohana') + ' and did some hacking around ' + linkTo('WordPress') + '.'
          },
   'Postfix': {score: 1 + 1 + 1, // 3 (2)
+              desc: 'Postfix together with ' + linkTo('Dovecot') + ' powers my self-administered mail server used by a small handful of people.'
              },
   'RegExp': {score: 1 + 2 + 2, // 5 (4)
+             desc: 'I love regular expressions. Often, my first solution to a string parsing problem is a regular expression.'
             },
   'Ruby': {score: 1 + 0 + 1, // 2 (1)
           },
@@ -136,6 +149,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'VxWorks': {score: 1 + 0 + 0, // 1 (1)
              },
   'Wikipedia': {score: 1 + 0 + 3, // 4 (3)
+                desc: 'I used to be an admin at the German Wikipedia and at Wikimedia Commons, wrote honored articles at the German Wikipedia and was a member of the German e-mail support and response team.'
                },
   'Windows': {score: 1 + 1 + 1, // 3 (2)
              },
