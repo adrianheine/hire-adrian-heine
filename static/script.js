@@ -4,13 +4,15 @@
         return;
     }
 
+    var last_loaded = null;
+
     function load(url, title) {
         var $target, mime,
             url_parsed = url.match(/^\/([^.\/]*)(?:\/([^.\/]*))?$/);
         if (!url_parsed) {
             return false;
         }
-        if (url_parsed[2] && document.location.pathname.indexOf('/' + url_parsed[1]) === 0) {
+        if (url_parsed[2] && last_loaded === url_parsed[1]) {
             $target = $('#focus');
             mime = 'application/prs.de.adrianlang.hire.focus';
         }
@@ -31,6 +33,8 @@
 
             $('nav a.active').removeClass('active');
             $('a[href="/' + (url_parsed[1] || 'intro') + '"]').addClass('active');
+
+            last_loaded = url_parsed[1];
         });
 
         return true;
