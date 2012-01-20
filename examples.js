@@ -3,7 +3,7 @@ var lib = require('./lib'),
 
     examples = {
         'Hire Adrian Lang': {
-            desc: 'I built »Hire Adrian Lang« in January 2012. It is powered by a ' + linkTo(['Skills', 'NodeJS']) + ' server using the ' + linkTo(['Skills', 'Express'], 'Express web framework') + ' with ' + linkTo(['Skills', 'Jade'], 'Jade templates') + ' and proxied by a ' + linkTo(['Skills', 'nginx']) +  ' on a ' + linkTo(['Skill', 'Debian']) + ' server. I used ' + linkTo(['Skills', 'jQuery']) + ' and the ' + linkTo(['Skills', 'HTML5'], 'HTML5 History API') + ' for providing a smoother navigation in modern browsers.</p><p>Sketching, doing a concept, coding and writing the texts took me about 20 hours.',
+            desc: 'I built »Hire Adrian Lang« in January 2012. It is powered by a ' + linkTo(['Skills', 'Node.js']) + ' server using the ' + linkTo(['Skills', 'Express'], 'Express web framework') + ' with ' + linkTo(['Skills', 'Jade'], 'Jade templates') + ' and proxied by a ' + linkTo(['Skills', 'nginx']) +  ' on a ' + linkTo(['Skill', 'Debian']) + ' server. I used ' + linkTo(['Skills', 'jQuery']) + ' and the ' + linkTo(['Skills', 'HTML5'], 'HTML5 History API') + ' for providing a smoother navigation in modern browsers.</p><p>Sketching, doing a concept, coding and writing the texts took me about 20 hours.',
             links: {github: 'adrianlang/hire-adrian-lang'}
         },
         'partial.js': {

@@ -30,9 +30,10 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'Dovecot': {score: 1 + 1 + 1, // 3 (2)
               desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'},
   'Etherpad lite': {score: 1 + 1 + 2, // 4
+                    desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue.'
                    },
   'Express': {score: 1 + 2 + 1, // 4 (4)
-              desc: 'I used the ' + linkTo('NodeJS') + ' web framework Express for two sites: ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This one') + ' and a relaunch for Piratenkompass, ' + linkTo('Etherpad lite')
+              desc: 'I used the ' + linkTo('Node.js') + ' web framework Express for two sites: ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This one') + ' and a yet-to-come relaunch of Piratenkompass. ' + linkTo('Etherpad lite') + ' uses Express as well.'
         },
   'fcgid': {score: 1 + 1 + 0, // 2 (1)
         },
@@ -52,6 +53,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'HTTP': {score: 1 + 2 + 1, // 4
           },
   'Jade': {score: 1 + 2 + 2, // 5 (4)
+           desc: 'I use Jade in my ' + linkTo('Node.js') + ' web applications together with ' + linkTo('Express') + '. I even got a <a href="https://github.com/visionmedia/jade/commit/bef63b3ebadfcbf2b079831e58d3b959123bd5ce" title=">small patch</a> landed.'
           },
   'Java': {score: 1 + 0 + 2, // 3 (2)
           },
@@ -60,7 +62,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'JVM': {score: 1 + 0 + 2, // 3 (2)
          },
   'jQuery': {score: 1 + 2 + 2, // 5 (6)
-             desc: 'jQuery UI, DokuWiki, Titanium' + linkTo(['Examples', 'Hire Adrian Lang'])
+             desc: 'I use jQuery for all my client-side JavaScript needs. Last year, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. On ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', jQuery is used for DOM manipulation and XHRs.'
             },
   'jQuery UI': {score: 1 + 1 + 1, // 3
                },
@@ -80,7 +82,8 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
           },
   'MySQL': {score: 1 + 1 + 1, // 3 (4)
           },
-  'NodeJS': {score: 1 + 1 + 1, // 3 (3)
+  'Node.js': {score: 1 + 1 + 1, // 3 (3)
+              desc: 'I’m relatively new to Node.js, but I like it. I’ve done some ' + linkTo('Etherpad lite') + ' hacking (Adding a ' + linkTo('Dokuwiki') + ' export, fixing a security issue), and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ' and another one, which is not yet released. I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + ' with Node.js.'
           },
   'nginx': {score: 1 + 1 + 0, // 2 (1)
           },
@@ -93,7 +96,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'OTRS': {score: 1 + 1 + 1, // 3 (1)
           },
   'PHP': {score: 1 + 2 + 3, // 6 (5)
-          desc: linkTo('StatusNet') + ', ' + linkTo('DokuWiki') + linkTo(['Examples', 'libomb'])
+          desc: 'Probably most of my software development experience comes from my work with PHP. In 2009, I wrote the library ' + linkTo(['Examples', 'libomb']) + ' for the microblogging software ' + linkTo('StatusNet') + '.</p><p>For the last two years, my full-time job was focused on ' + linkTo('DokuWiki') + ' – core contributions, templates and plugins.</p><p>Moreover, I took a look at ' + linkTo('Kohana') + ' and did some hacking around ' + linkTo('WordPress') + '.'
          },
   'Postfix': {score: 1 + 1 + 1, // 3 (2)
              },
@@ -124,6 +127,7 @@ var skills = { 'Apache': {score: 1 + 2 + 1,
   'Titanium': {score: 1 + 0 + 2, // 3 (3)
               },
   'Underscore.js': {score: 1 + 2 + 2, // 5 (3)
+                    desc: 'Not much to say about it: it’s great, I use it.'
               },
   'vim': {score: 1 + 2 + 1, // 4 (4)
          },
