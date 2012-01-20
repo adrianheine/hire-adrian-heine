@@ -30,7 +30,7 @@
             }
 
             $('nav a.active').removeClass('active');
-            $('a[href="/' + url_parsed[1] + '"]').addClass('active');
+            $('a[href="/' + (url_parsed[1] || 'intro') + '"]').addClass('active');
         });
 
         return true;
