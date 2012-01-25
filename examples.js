@@ -1,5 +1,7 @@
+"use strict";
+
 var lib = require('./lib'),
-    linkTo = lib.linkTo.bind(undefined, 'Examples');
+    linkTo = lib.linkTo.bind(undefined, 'Examples'),
 
     examples = {
         'Hire Adrian Lang': {
@@ -18,13 +20,11 @@ var lib = require('./lib'),
 
 module.exports = {};
 
-for (var example in examples) {
-    if (examples.hasOwnProperty(example)) {
-        module.exports[lib.id(example)] = {
-            desc: examples[example].desc,
-            title: example,
-            links: examples[example].links,
-            longTitle: lib.longTitle('Examples', example)
-        };
-    }
-}
+lib.each(examples, function (data, example) {
+    module.exports[lib.id(example)] = {
+        desc: data.desc,
+        title: example,
+        links: data.links,
+        longTitle: lib.longTitle('Examples', example)
+    };
+});

@@ -1,3 +1,5 @@
+"use strict";
+
 var lib = module.exports = require('underscore');
 
 lib.longTitle = function (tab, title) {

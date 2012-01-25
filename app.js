@@ -45,7 +45,7 @@ app.get('/:tab?/:sub?', function (req, res, next) {
         fragment = false;
 
     if (!tabs.hasOwnProperty(cur_t) ||
-        (sub && !tabs[cur_t].subs.hasOwnProperty(sub))) {
+            (sub && !tabs[cur_t].subs.hasOwnProperty(sub))) {
         return next();
     }
 

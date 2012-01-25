@@ -1,3 +1,5 @@
+"use strict";
+
 var skills = require('./skills'),
     _ = require('underscore');
 
