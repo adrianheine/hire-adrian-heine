@@ -167,7 +167,7 @@ var lib = require('./lib'),
         }, 'Windows': {
             score: 1 + 1 + 1, // 3 (2)
         }, 'WordPress': {
-            score: 1 + 1.5 + 1.5, // 3 (2)
+            score: 1 + 1.5 + 1.5, // 4 (2)
         }, 'XML': {
             score: 1 + 1 + 1 // 3 (3)
         }, 'XP': {
