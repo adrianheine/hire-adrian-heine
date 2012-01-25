@@ -33,3 +33,23 @@ lib.linkTo = function (def, path, txt) {
              'title="' + lib.html(lib.longTitle(path[0], path[1])) + '">' +
            lib.html(txt) + '</a>';
 };
+
+lib.buildSubs = function (tab, items, defaults) {
+    var longTitle = lib.longTitle;
+
+    defaults = defaults || {};
+
+    if (items) {
+        longTitle = longTitle.bind(undefined, tab);
+    } else {
+        items = tab;
+    }
+
+    return lib.reduce(items, function (ret, data, item) {
+        ret[lib.id(item)] = lib.extend({
+            title: item,
+            longTitle: longTitle(item)
+        }, defaults, data);
+        return ret;
+    }, {});
+};

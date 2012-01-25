@@ -5,6 +5,7 @@
  */
 
 var express = require('express'),
+    path = require('path'),
     lib = require('./lib');
 
 var app = module.exports = express.createServer();
@@ -29,15 +30,13 @@ app.configure('production', function () {
 });
 
 // Routes
-var tabs = lib.reduce(['Intro', 'Skills', 'Examples', 'CV', 'Contact'], function (obj, tab) {
-    var tabid = tab.toLowerCase();
-    obj[tabid] = {
-        title: tab,
-        longTitle: lib.longTitle(tab),
-        subs: require('./' + tabid)
-    };
-    return obj;
-}, {});
+var tabs = lib.buildSubs({'Intro': {}, 'Skills': {}, 'Examples': {}, 'CV': {}, 'Contact': {}});
+
+lib.each(tabs, function (tab, tabid) {
+    if (path.existsSync(__dirname + '/' + tabid + '.js')) {
+        tab.subs = lib.buildSubs(tab.title, require('./' + tabid))
+    }
+});
 
 app.get('/:tab?/:sub?', function (req, res, next) {
     var cur_t = req.params.tab || 'intro',
