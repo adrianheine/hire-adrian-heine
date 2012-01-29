@@ -15,23 +15,37 @@ html(lang='de')
     nav.block-band
       ul
         - each cap, id in tabs
-          - className = 'li' + (id === cur_t ? ' active' : '')
-          li
-            a(href='/#{id}',title='#{cap.longTitle}',class=className) #{cap.title}
+          - if (id !== 'intro') {
+            - className = 'li' + (id === cur_t ? ' active' : '')
+            li
+              a(href='/#{id}',title='#{cap.longTitle}',class=className) #{cap.title}
+          - }
     #content !{body}
-    footer.block-band
-      a(href="http://creativecommons.org/licenses/by-sa/3.0/de/",rel="license")
-        img(alt="Creative Commons License",src="//adrianlang.de/media/cc-by-sa-3.0-de-88x31.png",title="Creative Commons Attribution-Share Alike 3.0 Germany License",width='88',height='31')
-      ul
-        li
-          a.li(href="http://validator.w3.org/check/referer",title="HTML5 validation") Valid HTML5
-        li
-          a.li(href="http://jigsaw.w3.org/css-validator/check/referer",title="CSS validation") Valid CSS3
-        li
-          a.li(href="https://github.com/adrianlang/hire-adrian-lang",title="Hire Adrian Lang on GitHub")
-            span.hal.github HAL
-            |&nbsp;on GitHub
-        li
-          a.li(href="//adrianlang.de/id") © 2012 Adrian Lang
+    footer
+      .block-band
+        ul
+          li.license
+            a(href="http://creativecommons.org/licenses/by-sa/3.0/de/",rel="license")
+              img(alt="Creative Commons License",src="//adrianlang.de/media/cc-by-sa-3.0-de-88x31.png",title="Creative Commons Attribution-Share Alike 3.0 Germany License",width='88',height='31')
+          li.attribution
+            a.li(href="//adrianlang.de/id") © 2012 Adrian Lang
+      ul.tech-footer
+        ul
+          li: a(href="https://developer.mozilla.org",title="Mozilla Developer Network") MDN
+          li: a(href="http://validator.w3.org/check/referer",title="HTML5 validation") Valid HTML5
+          li: a(href="http://jigsaw.w3.org/css-validator/check/referer",title="CSS validation") Valid CSS3
+        ul
+          li: a(href="http://nodejs.org",title="Node.js") Node.js platform
+          li: a(href="http://www.debian.org",title="Debian") Debian GNU/Linux
+          li: a(href="http://www.manitu.de/?partner=016afEkBV%2B3%2FULeeLBBwTnGi0ej3TpkA9BshbqimWZLZA%3D",title="Manitu") Manitu (Partner link)
+        ul
+          li
+            a(href="https://github.com/adrianlang/hire-adrian-lang",title="Hire Adrian Lang on GitHub")
+              span.hal.github HAL
+              |&nbsp;on GitHub
+        ul
+          li: a(href="xmpp:adrian[at]kleinrot[dot]net",title="Talk to me via Jabber: adrian [at] kleinrot [dot] net") Jabber
+          li: a(href="mailto:mail[at]adrianlang[dot]de",title="Talk to me via E-mail: mail [at] adrianlang [dot] de") E-mail
+          li: a(href="/contact",title="Hire Adrian Lang | Contact") /contact
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
     script(src='/static/script.js')

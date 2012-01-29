@@ -7,7 +7,7 @@ body {
     background-color: #cbf7ba; /*grün 1*/
     color: #289001; /*grün 5*/
     font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 1.3333em;
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ header h1 a {
 .block-band ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -53,26 +53,26 @@ header h1 a {
     /* Does not work in IE6&7 and Firefox 2, workaround is easy:
        https://blog.mozilla.com/webdev/2009/02/20 */
     display: inline-block;
+    margin: 0.5em 1%;
 }
 
-.block-band li .li {
+.block-band .li {
     display: block;
     background-color: #90d0c0; /*grün x*/
-    padding: 4px;
-    margin: 8px 10px;
+    padding: 0.2em 0.5em;
     text-align: center;
     font-size: 1.2em;
 }
 
 
-.block-band li .li:focus,
-.block-band li .li:hover {
+.block-band .li:focus,
+.block-band .li:hover {
     background-color: #28a388; /*grün x*/
     color: white; /**/
 }
 
 nav li {
-    width: 20%;
+    width: 23%;
     min-width: 7em;
 }
 
@@ -112,23 +112,22 @@ footer {
     clear: both;
 }
 
-footer [rel="license"] {
-    margin: 8px 10px;
-    float: left;
+footer .block-band li {
+    width: 48%;
 }
 
-footer [rel="license"] img {
+footer .license {
+    padding: 0;
+    height: 14px;
+    text-align: left;
+}
+
+footer .license img {
     border-width: 0;
-    vertical-align: middle;
 }
 
-footer.block-band li {
-    width: 25%;
-    min-width: 14em;
-}
-
-footer.block-band ul {
-    margin-left: 102px;
+footer .attribution .li {
+    text-align: right;
 }
 
 .tagcloud {
@@ -164,7 +163,7 @@ footer.block-band ul {
 }
 
 .focussable {
-    width: 48%;
+    width: 49%;
     display: inline-block;
     padding: 0;
     margin: 1em 0;
@@ -181,7 +180,7 @@ footer.block-band ul {
 
 #focus {
     float: right;
-    width: 48%;
+    width: 49%;
     text-align: justify;
     margin: 1em 0;
 }
@@ -218,6 +217,36 @@ footer .hal {
     color: #289001;
 }
 
+.tech-footer {
+    padding: 0 10%;
+    font-size: 0.8em;
+    margin: 0 auto;
+}
+
+.tech-footer ul {
+    display: inline-block;
+    width: 25%;
+    padding: 0 1%;
+    margin: 0.75em 0;
+    vertical-align: top;
+    list-style: none;
+    border-left: 1px solid;
+    min-width: 10em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+/* ceil((10em / 0.20 / 0.8) * 0.8 * 1.125) = 57em
+ * ceil((ul:min-width / ul:width / .tech-footer:padding) * :font-sizes)
+ */
+@media only screen and (max-width: 57em) {
+    .tech-footer ul {
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     #focus {
         float: none;
@@ -235,7 +264,23 @@ footer .hal {
         width: auto;
     }
 
-    .block-band {
+    .block-band, .tech-footer {
         padding: 0;
     }
+}
+
+/*
+ * max-width of whole content
+ */
+
+#content {
+    max-width: 60em;
+}
+
+.block-band ul {
+    max-width: 60em;
+}
+
+.tech-footer {
+    max-width: 75em; /* 80% of 75em are 60em
 }
