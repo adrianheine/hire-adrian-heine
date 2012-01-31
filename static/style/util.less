@@ -1,0 +1,14 @@
+.background-size (@size) {
+    // Does not work in IE < 9
+    -moz-background-size: @size;
+    -webkit-background-size: @size;
+    -o-background-size: @size;
+    background-size: @size;
+}
+
+.box-sizing (@sizing) {
+    -moz-box-sizing: @sizing;
+    -webkit-box-sizing: @sizing;
+    -ms-box-sizing: @sizing;
+    box-sizing: @sizing;
+}

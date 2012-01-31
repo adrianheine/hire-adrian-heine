@@ -1,0 +1,72 @@
+body {
+    background-color: @primaryLighter;
+    color: @primaryDark;
+    font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+    font-size: 1.125em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.6666em;
+    line-height: 1.5em;
+    margin: 0.75em 0.6666em;
+}
+
+.hal, h1 {
+    color: @primaryDark;
+    font-family: "Nimbus Mono L", "Courier New", "Courier", monospace;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0 0 0.6666em 0;
+    line-height: 1.3333em;
+}
+
+address {
+    display: inline;
+    font-style: normal;
+}
+
+img {
+    border-width: 0;
+}
+
+.group {
+    display: inline-block;
+}
+
+.closing {
+    padding-left: 1em;
+}
+
+.fn {
+    font-size: 0.8em;
+    margin: 1.25em 0;
+}
+
+.github, .gitorious {
+    background-repeat: no-repeat;
+    background-position: 0 0.15em;
+    padding-left: 1em;
+
+    .background-size(1em 1em);
+}
+
+.github {
+    background-image: url(/static/github.ico);
+}
+
+.gitorious {
+    background-image: url(/static/gitorious.ico);
+}
+

@@ -3,10 +3,10 @@
   p
     !{tabs.examples.subs[sub].desc}
   - if (tabs.examples.subs[sub].links.github)
-    span.github.focus-link
-      a(href='https://github.com/#{tabs.examples.subs[sub].links.github}',title='#{tabs.examples.subs[sub].title} on GitHub') #{tabs.examples.subs[sub].title}
+    .focus-link
+      a.github(href='https://github.com/#{tabs.examples.subs[sub].links.github}',title='#{tabs.examples.subs[sub].title} on GitHub') #{tabs.examples.subs[sub].title}
       |&nbsp;on&nbsp;GitHub
   - if (tabs.examples.subs[sub].links.gitorious)
-    span.gitorious.focus-link
-      a(href='https://gitorious.org/#{tabs.examples.subs[sub].links.gitorious}',title='#{tabs.examples.subs[sub].title} on Gitorious') #{tabs.examples.subs[sub].title}
+    .focus-link
+      a.gitorious(href='https://gitorious.org/#{tabs.examples.subs[sub].links.gitorious}',title='#{tabs.examples.subs[sub].title} on Gitorious') #{tabs.examples.subs[sub].title}
       |&nbsp;on&nbsp;Gitorious

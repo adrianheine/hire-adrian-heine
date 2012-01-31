@@ -1,0 +1,32 @@
+.block-band {
+    background-color: @secondaryLight;
+    padding: 0 10%;
+    color: #dafcfa;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    li {
+        /* Does not work in IE6&7 and Firefox 2, workaround is easy:
+           https://blog.mozilla.com/webdev/2009/02/20 */
+        display: inline-block;
+        margin: 0.5em 1%;
+    }
+
+    .li {
+        display: block;
+        background-color: @secondaryDark;
+        padding: 0.25em 0.5em;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .li:focus,
+    .li:hover {
+        background-color: @secondaryDarker;
+        color: @secondaryLighter;
+    }
+}
