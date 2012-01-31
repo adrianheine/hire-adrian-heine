@@ -21,12 +21,12 @@ app.configure(function () {
     var less = require('less'),
         staticDir = '/static',
         lessDir = staticDir + '/style';
-    express.compiler.compilers.less.compile = function(str, fn){
-      try {
-        less.render(str, {paths: [__dirname + lessDir]}, fn);
-      } catch (err) {
-        fn(err);
-      }
+    express.compiler.compilers.less.compile = function (str, fn) {
+        try {
+            less.render(str, {paths: [__dirname + lessDir]}, fn);
+        } catch (err) {
+            fn(err);
+        }
     };
 
     app.use(lessDir, express.compiler({ src: __dirname + lessDir, enable: ['less'] }));
@@ -49,7 +49,7 @@ var tabs = lib.buildSubs({'Intro': {}, 'Skills': {}, 'Examples': {}, 'CV': {}, '
 
 lib.each(tabs, function (tab, tabid) {
     if (path.existsSync(__dirname + '/' + tabid + '.js')) {
-        tab.subs = lib.buildSubs(tab.title, require('./' + tabid))
+        tab.subs = lib.buildSubs(tab.title, require('./' + tabid));
     }
 });
 

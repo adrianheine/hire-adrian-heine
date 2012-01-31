@@ -1,61 +1,70 @@
+/*jslint node:false,browser:true*/
+/*global $*/
 (function () {
+    "use strict";
+
     if (!history.pushState) {
         // We only support browsers with history API
         return;
     }
 
-    var last_loaded = null;
+    var load = (function () {
+        var last_loaded = null,
+            url_matcher = /^\/([^.\/]*)(?:\/([^.\/]*))?$/;
 
-    function load(url, title) {
-        var $target, mime,
-            url_parsed = url.match(/^\/([^.\/]*)(?:\/([^.\/]*))?$/);
-        if (!url_parsed) {
-            return false;
-        }
-        if (url_parsed[2] && last_loaded === url_parsed[1]) {
-            $target = $('#focus');
-            mime = 'application/prs.de.adrianlang.hire.focus';
-        }
-        if (!$target || $target.length === 0) {
-            $target = $('#content');
-            mime = 'application/prs.de.adrianlang.hire.tab';
-        }
-
-        $.ajaxSetup({headers: {'Accept': mime}});
-        $target.load(url, function (responseText, textStatus) {
-            if (textStatus !== 'success' && textStatus !==  'notmodified') {
-                return;
+        return function (url, title) {
+            var $target, mime, url_parsed = url.match(url_matcher);
+            if (!url_parsed) {
+                return false;
+            }
+            if (url_parsed[2] && last_loaded === url_parsed[1]) {
+                $target = $('#focus');
+                mime = 'application/prs.de.adrianlang.hire.focus';
+            }
+            if (!$target || $target.length === 0) {
+                $target = $('#content');
+                mime = 'application/prs.de.adrianlang.hire.tab';
             }
 
-            if (title) {
-                document.title = title;
-            }
+            $.ajaxSetup({headers: {'Accept': mime}});
+            $target.load(url, function (responseText, textStatus) {
+                if (['success', 'notmodified'].indexOf(textStatus) === -1) {
+                    return;
+                }
 
-            $('nav a.active').removeClass('active');
-            $('a[href="/' + (url_parsed[1] || 'intro') + '"]').addClass('active');
+                if (title) {
+                    document.title = title;
+                }
 
-            last_loaded = url_parsed[1];
-        });
+                $('nav a.active').removeClass('active');
+                $('a[href="/' + (url_parsed[1] || 'intro') + '"]').addClass('active');
 
-        return true;
-    }
+                last_loaded = url_parsed[1];
+            });
+
+            return true;
+        };
+    }());
 
     // From https://github.com/defunkt/jquery-pjax/blob/master/jquery.pjax.js
-    var popped = ('state' in window.history), initialURL = location.href;
-    window.onpopstate = function(e) {
-        // Ignore inital popstate that some browsers fire on page load
-        var initialPop = !popped && location.href == initialURL;
-        popped = true;
-        if (initialPop) {
-            return;
-        }
-        if (!e.state) {
-            console.warn('Whaaat', document.location);
-            load(document.location.pathname + '');
-            return;
-        }
-        load(e.state.url, e.state.title);
-    };
+    window.onpopstate = (function () {
+        var popped = typeof history.state !== 'undefined',
+            initialURL = location.href;
+        return function (e) {
+            // Ignore inital popstate that some browsers fire on page load
+            var initialPop = !popped && location.href === initialURL;
+            popped = true;
+            if (initialPop) {
+                return;
+            }
+            if (!e.state) {
+                console.warn('Whaaat', document.location);
+                load(String(document.location.pathname));
+                return;
+            }
+            load(e.state.url, e.state.title);
+        };
+    }());
 
     $(function () {
         $(document.body).on('click', 'a', function (e) {
@@ -73,7 +82,8 @@
             e.preventDefault();
         });
 
-        history.replaceState({url: document.location.pathname + '', title: document.title + ''},
-                             document.title + '');
+        history.replaceState({url: String(document.location.pathname),
+                              title: String(document.title)},
+                             String(document.title));
     });
 }());
