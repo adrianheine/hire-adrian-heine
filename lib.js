@@ -3,7 +3,14 @@
 var lib = module.exports = require('underscore');
 
 lib.longTitle = function (tab, title) {
-    return 'Hire Adrian Lang | ' + tab + (title ? ' | ' + title : '');
+    var parts = ['Hire Adrian Lang'];
+    if (tab && tab !== 'Intro') {
+        parts.push(tab);
+    }
+    if (title) {
+        parts.push(title);
+    }
+    return parts.join(' | ');
 };
 
 lib.mimeType = function (subtype) {
