@@ -13,3 +13,61 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+[SERVER]
+A standard, express-based Node.js web site. Since the site is completely static
+it could have as well been rendered to HTML, CSS and client-side JS once.
+
+The content is split into five tabs. Each tab is represented by an object with
+the following properties:
+
+  * title: The single-word title of the tab
+  * longTitle: The title of the HTML document representing the tab
+  * (subs: An array of similar objects, representing subpages)
+
+subpages may have additional properties. Subpages are defined in separate JS
+files in the `subs` directory: If no file corresponding to a tab exists, the
+tab has no subpages.
+
+HTML is generated from Jade templates in the `views` directory. Every tab has
+an own template file, there is a layout file and tabs with subpages have an
+additional `tab_subs.jade` file for the subpage content rendering. This setup
+works best where the whole tab content is visible on subpages as well.
+
+The response sent to a client heavily depends on the passed `Accept` header:
+  * If the `Accept` header includes standard HTML, the full page with layout and
+    tab template is rendered. If a subpage has been requested, the tab template
+    has to include and render the subpage template appropriatly.
+  * If the `Accept` header does not include HTML, but includes
+    `application/prs.de.adrianlang.hire.tab`, the tab template is rendered
+    without the layout.
+  * Finally, if the `Accept` header does not include HTML, but
+    `application/prs.de.adrianlang.hire.focus`, the tab’s subpage template is
+    directly rendered, without layout or tab template.
+
+Accordingly, the response sets `Vary: Accept` and the `Content-Type` as
+requested.
+
+[CLIENT CODE]
+The client-side JavaScript is only active in modern browsers with HTML5’s
+history manipulation API available. In such environments, it augments links
+such that internal navigation works without page reloads by cleverly retrieving
+the needed page content via XHR and inserting it in-place. document location,
+title and browsing history are handled correctly. The script makes use of the
+aforementioned personal mime types to specify which representation of a tab or
+subpage it needs. jQuery is used for DOM manipulation and XHR.
+
+[HTML]
+The HTML uses HTML5‘s new, semantic elements. It’s quite straight-forward and
+contains no additional markup for styling purposes.
+
+[STYLE]
+I’m using Less for a SMACCS-like modularization. The CSS targets current
+browsers: IE > 7, Firefox > 3, Opera > 9.0. Limiting techniques are box-sizing,
+inline-block and media queries. background-size does not work in IE < 9, but
+it’s a minor issue.
+
+The layout is a grid with 4 columns, each having a spacing of 0.8333% of the
+page width to the left and right. The grid has a padding of 10% on the left and
+right, which leaves an area of 80% for the content. Vertically, the elements
+are aligned on 0.5em rows. The maximum width of the whole page is 48em.

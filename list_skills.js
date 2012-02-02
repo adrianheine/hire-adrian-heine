@@ -1,3 +1,4 @@
+// An utility script listing the defined skills grouped by score
 "use strict";
 
 var skills = require('./subs/skills'),
