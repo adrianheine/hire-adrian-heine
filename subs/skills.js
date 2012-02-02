@@ -1,6 +1,6 @@
 /*jslint white:true*/
 "use strict";
-var lib = require('./lib'),
+var lib = require('../lib'),
     linkTo = lib.linkTo.bind(undefined, 'Skills');
 
 /*

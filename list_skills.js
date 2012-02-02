@@ -1,6 +1,6 @@
 "use strict";
 
-var skills = require('./skills'),
+var skills = require('./subs/skills'),
     _ = require('underscore');
 
 skills = _.map(_.groupBy(_.map(skills, function (data, skill) {

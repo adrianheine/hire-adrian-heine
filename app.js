@@ -48,8 +48,8 @@ app.configure('production', function () {
 var tabs = lib.buildSubs({'Intro': {}, 'Skills': {}, 'Examples': {}, 'CV': {}, 'Contact': {}});
 
 lib.each(tabs, function (tab, tabid) {
-    if (path.existsSync(__dirname + '/' + tabid + '.js')) {
-        tab.subs = lib.buildSubs(tab.title, require('./' + tabid));
+    if (path.existsSync(__dirname + '/subs/' + tabid + '.js')) {
+        tab.subs = lib.buildSubs(tab.title, require('./subs/' + tabid));
     }
 });
 
