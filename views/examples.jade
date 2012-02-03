@@ -1,9 +1,9 @@
 #focus.focus
     include examples_sub
-ul.focussable
+ul.focussable.big-links
   - each opts, example in tabs[cur_t].subs
     li
-      a(href='/examples/#{example}',title='#{opts.longTitle}')
+      a.li(href='/examples/#{example}',title='#{opts.longTitle}')
         - // This is probably a dirty hack
         - buf.push(opts.title.replace(' ', '&nbsp;'))
       | 
