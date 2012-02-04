@@ -6,7 +6,11 @@
 
 var express = require('express'),
     path = require('path'),
-    lib = require('./lib');
+    lib = require('./lib'),
+
+    staticDir = '/static',
+    lessDir = staticDir + '/style',
+    lessConfig = {paths: [__dirname + lessDir]};
 
 var app = module.exports = express.createServer();
 
@@ -18,12 +22,10 @@ app.configure(function () {
     app.use(express.favicon(__dirname + '/favicon.ico'));
 
     // Hack connect.js to allow relative @import statements in less.js
-    var less = require('less'),
-        staticDir = '/static',
-        lessDir = staticDir + '/style';
+    var less = require('less');
     express.compiler.compilers.less.compile = function (str, fn) {
         try {
-            less.render(str, {paths: [__dirname + lessDir]}, fn);
+            less.render(str, lessConfig, fn);
         } catch (err) {
             fn(err);
         }
@@ -38,10 +40,12 @@ app.configure(function () {
 
 app.configure('development', function () {
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+    lessConfig.compress = false;
 });
 
 app.configure('production', function () {
     app.use(express.errorHandler());
+    lessConfig.compress = true;
 });
 
 // Routes
