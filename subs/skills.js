@@ -18,13 +18,13 @@ module.exports = {
         desc: 'During my studies I made several contributions to a ' + linkTo('C', 'C-based') + ' ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting Atmel systems.'
     }, 'C': {
         score: 1 + 1 + 2, // 4 (3)
-        desc: ''
+        desc: 'I read and write C code for more than 10 years. The biggest project I participated in was a C-based ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting ' + linkTo('Atmel') + ' systems. I haven’t been much of a C hacker lately, but I’m still used to browsing through and editing code like the ' + linkTo('PHP') + ' interpreter or other C-based monsters.'
     }, 'C++': {
         score: 1 + 1 + 1, // 3 (1)
-        desc: ''
+        desc: 'Many C++ concepts like <abbr title="Template Meta-Programming">TMP</abbr> or operator overloading strike me as elegant or powerful (and sometimes even both at the same time). Unfortunately, my practical experience is limited to some small projects using g++ and ' + linkTo('Visual C++') + '.'
     }, 'CSS': {
         score: 1 + 2 + 1, // 4 (4)
-        desc: ''
+        desc: 'CSS is a part of my daily work, and I apply my usual attention to it. Thus, I know my units, use CSS3 features where needed and possible and try to stay out of specificity hell. Since my ' + linkTo('HTML') + ' is semantic and non-representational, there is quite some work to do for CSS.</p><p>For ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used ' + linkTo('LESS') + ' for CSS generation and tried to apply a loose SMACSS approach. The style has certain ' + linkTo('Responsive', 'responsive design') + ' features and uses CSS3 features like media queries, box-sizing and background-size.'
     }, 'darcs': {
         score: 1 + 1 + 0, // 2 (2)
         desc: 'When I started contributing to ' + linkTo('DokuWiki') + ', it used darcs as a revision control system, but soon changed to ' + linkTo('git') + '.'
@@ -33,7 +33,7 @@ module.exports = {
         desc: ''
     }, 'Debian': {
         score: 1 + 2 + 2, // 5 (4)
-        desc: 'Debian GNU/Linux is the only operating system I use extensively. It powers my workstation, netbook and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice.'
+        desc: 'Debian ' + linkTo('GNU/Linux') + ' is the only operating system I use extensively. It powers my workstation, netbook and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice.'
     }, 'DIME': {
         score: 1 + 0 + 0, // 1 (1)
         desc: ''
@@ -59,9 +59,10 @@ module.exports = {
         desc: 'git is my preferred revision control system since around 2008. I use it for every non-trivial project I start from software to Diablo II save games to presentations or applications.</p><p>I consider myself a reasonably advanced git user – features like bisect, blame, hunk index adding or rebasing are part of my daily routine. Aside from the gory details, I am able to develop git-based workflows building on tags and different kinds of branches.'
     }, 'GNU/Linux': {
         score: 1 + 2 + 1, // 4 (3)
+        desc: 'I exclusively run ' + linkTo('Debian', 'Debian GNU/Linux') + ' on my servers, netbook and workstation.'
     }, 'Haskell': {
         score: 1 + 1 + 0, // 2 (2)
-        desc: 'PrjEuler, papers'
+        desc: 'I love Haskell and solved <a href="https://projecteuler.net/progress=adrianlang">50 Project Euler problems</a> with it. Still, I consider everything above the basic concepts to be really black magic and whenever I read papers on or using Haskell, I occasionally reach a point where I have to concentrate really hard or even read some 100 pages of background information.'
     }, 'HTML': {
         score: 1 + 2 + 2, // 5 (5)
         desc: 'HTML is part of my everyday work. I like my HTML clean, semantic and valid. That’s why I’m hoping for ' + linkTo('HTML5') + ' goodness.'
@@ -97,6 +98,9 @@ module.exports = {
     }, 'LDAP': {
         score: 1 + 1 + 1, // 3 (3)
         desc: 'I run LDAP on one of my servers and have some experience using the service.'
+    }, 'LESS': {
+        score: 1 + 1 + 1, // 3
+        desc: 'I used LESS for ' + linkTo(['Examples', 'Hire Adrian Lang']) + ' and once migrated ' + linkTo('DokuWiki', 'DokuWiki’s') + ' custom ' + linkTo('CSS') + ' build system to lessphp as an experiment.'
     }, 'MacOS X': {
         score: 1 + 1 + 0, // 2 (2)
     }, 'MediaWiki': {
@@ -116,6 +120,7 @@ module.exports = {
         score: 1 + 0 + 2, // 3 (3)
     }, 'OpenMicroBlogging': {
         score: 1 + 0 + 3, // 4 (2)
+        desc: 'I wrote the library ' + linkTo(['Examples', 'libomb']) + ' which is one of the few OpenMicroBlogging implementations. OMB has been obsoleted by oStatus, though.'
     }, 'OpenID': {
         score: 1 + 1 + 1, // 3 (2)
     }, 'OTRS': {
@@ -128,7 +133,10 @@ module.exports = {
         desc: 'Postfix together with ' + linkTo('Dovecot') + ' powers my self-administered mail server used by a small handful of people.'
     }, 'RegExp': {
         score: 1 + 2 + 2, // 5 (4)
-        desc: 'I love regular expressions. Often, my first solution to a string parsing problem is a regular expression.'
+        desc: 'I love regular expressions. Often, my first solution to a string parsing problem is a regular expression (as long as it is <a href="http://stackoverflow.com/a/1732454/55965" title="»Have you tried using an XML parser instead?« on Stack Overflow">not HTML</a>.'
+    }, 'Responsive': {
+        score: 1 + 1 + 2, // 4
+        desc: 'When I first heard of responsive design, it struck me as a great answer to the huge diversity of clients out there. I like the constraints it puts on minimalism and strict separation of content, presentation and behaviour – ' + linkTo('HTML') + ', ' + linkTo('CSS') + ' and ' + linkTo ('JavaScript', 'JS') + '.</p><p>' + linkTo(['Examples', 'Hire Adrian Lang']) + ' features a tiny bit of responsiveness. I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.'
     }, 'Ruby': {
         score: 1 + 0 + 1, // 2 (1)
     }, 'Ruby on Rails': {
@@ -158,6 +166,7 @@ module.exports = {
         desc: 'Not much to say about it: it’s great, I use it.'
     }, 'vim': {
         score: 1 + 2 + 1, // 4 (4)
+        desc: 'I use vim for everything, but I’m still stuck with rather basic editing functionality.'
     }, 'Visual C++': {
         score: 1 + 0 + 0, // 1 (1)
     }, 'VxWorks': {
@@ -169,6 +178,7 @@ module.exports = {
         score: 1 + 1 + 1, // 3 (2)
     }, 'WordPress': {
         score: 1 + 1.5 + 1.5, // 4 (2)
+        desc: 'I maintain several WordPress installations, made some theming efforts and wrote WordPress plugins.'
     }, 'XML': {
         score: 1 + 1 + 1 // 3 (3)
     }, 'XP': {
