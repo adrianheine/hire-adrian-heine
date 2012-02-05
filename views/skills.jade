@@ -5,5 +5,5 @@ ul.tagcloud.focussable
     li(class='t#{opts.score}')
       a(href='/skills/#{skill}',title='Hire Adrian Lang | Skills | #{opts.title}')
         - // This is probably a dirty hack
-        - buf.push(opts.title.replace(' ', '&nbsp;'))
+        - buf.push(opts.title.replace(/ /g, '&nbsp;'))
       | 
