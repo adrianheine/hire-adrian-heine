@@ -52,5 +52,16 @@ html(lang='de')
               li: a(href="xmpp:adrian[at]kleinrot[dot]net",title="Talk to me via Jabber: adrian [at] kleinrot [dot] net") Jabber
               li: a(href="mailto:mail[at]adrianlang[dot]de",title="Talk to me via E-mail: mail [at] adrianlang [dot] de") E-mail
               li: a(href="/contact",title="Hire Adrian Lang | Contact") /contact
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-    script(src='/static/script.js')
+    script
+        // We only support browsers with history API
+        if (history.pushState) {
+            window.onload = function () {
+                function loadJS(file) {
+                    var s = document.createElement('script');
+                    s.src = file;
+                    document.body.appendChild(s);
+                }
+                loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+                loadJS('/static/script.js');
+            };
+        }

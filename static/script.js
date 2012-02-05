@@ -3,11 +3,6 @@
 (function () {
     "use strict";
 
-    if (!history.pushState) {
-        // We only support browsers with history API
-        return;
-    }
-
     var load = (function () {
         var last_loaded = null,
             url_matcher = /^\/([^.\/]*)(?:\/([^.\/]*))?$/;
