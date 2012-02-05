@@ -5,7 +5,10 @@ var skills = require('./subs/skills'),
     _ = require('underscore');
 
 skills = _.map(_.groupBy(_.map(skills, function (data, skill) {
-    return {score: data.score, title: skill};
+    return {
+        score: data.score,
+        title: skill + (data.desc === 'No description yet, sorry.' ? '(!)' : '')
+    };
 }), function (skill) {
     return skill.score;
 }), function (group) {
@@ -13,5 +16,5 @@ skills = _.map(_.groupBy(_.map(skills, function (data, skill) {
 });
 
 _.each(skills, function (g) {
-    console.log('::', g.join(', '), '\n');
+    console.log(String(g.length), ':', g.join(', '), '\n');
 });
