@@ -71,7 +71,7 @@ module.exports = {
         desc: 'In ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used a HTML5 template and explored the new history API.'
     }, 'HTTP': {
         score: 1 + 2 + 1, // 4
-        desc: 'My first experience with HTML was when I used ' + linkTo('SOAP') + '. Since then, I pity the current state of HTTP usage as barely more than a stupid URL retrieving or data posting protocol. Lately, I started to like REST and its intensive use of HTTP features.'
+        desc: 'My first experience with HTTP was when I used ' + linkTo('SOAP') + '. Since then, I pity the current state of HTTP usage as barely more than a stupid URL retrieving or data posting protocol. Lately, I started to like REST and its intensive use of HTTP features.'
     }, 'Jade': {
         score: 1 + 2 + 2, // 5 (4)
         desc: 'I use Jade in my ' + linkTo('Node.js') + ' web applications together with ' + linkTo('Express') + '. I even got a <a href="https://github.com/visionmedia/jade/commit/bef63b3ebadfcbf2b079831e58d3b959123bd5ce" title="My patch for Jade">small patch</a> landed.'
