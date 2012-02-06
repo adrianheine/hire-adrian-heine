@@ -59,6 +59,7 @@ html(lang='de')
                 function loadJS(file) {
                     var s = document.createElement('script');
                     s.src = file;
+                    s.async = false;
                     document.body.appendChild(s);
                 }
                 loadJS('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
