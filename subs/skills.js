@@ -116,6 +116,7 @@ module.exports = {
         desc: 'I’m relatively new to Node.js, but I like it. I’ve done some ' + linkTo('Etherpad lite') + ' hacking (Adding a ' + linkTo('Dokuwiki') + ' export, fixing a security issue), and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ' and another one, which is not yet released. I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + ' with Node.js.'
     }, 'nginx': {
         score: 1 + 1 + 0, // 2 (1)
+        desc: 'I use nginx to proxy my ' + linkTo('Node.js', 'Node.js-based') + ' sites.'
     }, 'OAuth': {
         score: 1 + 0 + 2, // 3 (3)
     }, 'OpenMicroBlogging': {
