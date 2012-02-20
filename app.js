@@ -68,11 +68,9 @@ app.get('/:tab?/:sub?', function (req, res, next) {
     }
 
     if (!req.accepts('html')) {
-        if (req.accepts(lib.mimeType('focus'))) {
-            fragment = 'focus';
-        } else if (req.accepts(lib.mimeType('tab'))) {
-            fragment = 'tab';
-        }
+        fragment = lib.firstRes(['focus', 'tab'], function (type) {
+            return req.accepts(lib.mimeType(type)) && type;
+        });
     }
 
     res.header('Vary', 'Accept');

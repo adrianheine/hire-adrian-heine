@@ -60,3 +60,12 @@ lib.buildSubs = function (tab, items, defaults) {
         return ret;
     }, {});
 };
+
+lib.firstRes = function (items, test_func) {
+    var res = null;
+    items.some(function () {
+        res = test_func.apply(this, Array.prototype.slice.call(arguments));
+        return res;
+    });
+    return res;
+};
