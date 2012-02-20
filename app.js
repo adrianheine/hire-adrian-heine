@@ -70,7 +70,7 @@ app.get('/:tab?/:sub?', function (req, res, next) {
     if (!req.accepts('html')) {
         if (req.accepts(lib.mimeType('focus'))) {
             fragment = 'focus';
-        } else if (lib.mimeType('tab')) {
+        } else if (req.accepts(lib.mimeType('tab'))) {
             fragment = 'tab';
         }
     }
