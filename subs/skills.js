@@ -5,9 +5,9 @@ var lib = require('../lib'),
 
 /*
  * 1 +
- * Actuality (2) (>1 year ago, <1 year ago, daily),
- * Depth of usage (3) (Barely, Sorta normal usecase, Quite some diggin, Wizardry)
- * Hipness (1) (Whatever, Paint it big!)
+ * Actuality (0-2) (>1 year ago, <1 year ago, daily),
+ * Depth of usage (0-3) (Barely, Sorta normal usecase, Quite some diggin, Wizardry)
+ * Hipness (0-1) (Whatever, Paint it big!)
  */
 module.exports = {
     'Apache': {
@@ -19,6 +19,12 @@ module.exports = {
     }, 'C': {
         score: 1 + 1 + 2, // 4 (3)
         desc: 'I read and write C code for more than 10 years. The biggest project I participated in was a C-based ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting ' + linkTo('Atmel') + ' systems. I haven’t been much of a C hacker lately, but I’m still used to browsing through and editing code like the ' + linkTo('PHP') + ' interpreter or other C-based monsters.'
+    }, 'CakePHP': {
+        score: 1 + 1 + 1, // 3
+        desc: 'CakePHP is something I had to use for a customer. I know how to use it, how to look something up in the source or documentation and how to stay alive.'
+    }, 'CouchDB': {
+        score: 1 + 1 + 2, // 4
+        desc: 'I use CouchDB for some private projects. I love the way it makes me think about database performance, and that it is completely about ' + linkTo('JavaScript') + ' and ' + linkTo('HTTP') + '.'
     }, 'C++': {
         score: 1 + 1 + 1, // 3 (1)
         desc: 'Many C++ concepts like <abbr title="Template Meta-Programming">TMP</abbr> or operator overloading strike me as elegant or powerful (and sometimes even both at the same time). Unfortunately, my practical experience is limited to some small projects using g++ and ' + linkTo('Visual C++') + '.'
@@ -45,7 +51,7 @@ module.exports = {
         desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'
     }, 'Etherpad lite': {
         score: 1 + 1 + 2, // 4
-        desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue.'
+        desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue. Recently, I wrote a custom single sign-on adapter for an etherpad lite instance.'
     }, 'Express': {
         score: 1 + 2 + 1, // 4 (4)
         desc: 'I used the ' + linkTo('Node.js') + ' web framework Express for two sites: ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This one') + ' and a yet-to-come relaunch of Piratenkompass. ' + linkTo('Etherpad lite') + ' uses Express as well.'
@@ -113,10 +119,10 @@ module.exports = {
         score: 1 + 1 + 1, // 3 (4)
     }, 'Node.js': {
         score: 1 + 1 + 1, // 3 (3)
-        desc: 'I’m relatively new to Node.js, but I like it. I’ve done some ' + linkTo('Etherpad lite') + ' hacking (Adding a ' + linkTo('Dokuwiki') + ' export, fixing a security issue), and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ' and another one, which is not yet released. I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + ' with Node.js.'
+        desc: 'I love Node.js and use it for all my recent web development and scripting needs. I’ve done some ' + linkTo('Etherpad lite') + ' hacking  and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', which uses ' + linkTo('Express') + ' and ' + linkTo('Jade') + ' with Node.js.'
     }, 'nginx': {
-        score: 1 + 1 + 0, // 2 (1)
-        desc: 'I use nginx to proxy my ' + linkTo('Node.js', 'Node.js-based') + ' sites.'
+        score: 1 + 1 + 1, // 3 (1)
+        desc: 'I start to use nginx for all my web server needs. I proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'
     }, 'OAuth': {
         score: 1 + 0 + 2, // 3 (3)
     }, 'OpenMicroBlogging': {
