@@ -1,0 +1,21 @@
+{
+  "author": "Adrian Lang <mail@adrianlang.de> (http://hire.adrianlang.de)",
+  "name": "hire-adrianlang-de",
+  "version": "0.0.1",
+  "homepage": "http://hire.adrianlang.de",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adrianlang/hire-adrian-lang.git"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "underscore": "",
+    "less": "",
+    "express": "2.x",
+    "jade": ""},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
