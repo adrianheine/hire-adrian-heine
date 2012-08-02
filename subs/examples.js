@@ -9,11 +9,11 @@ module.exports = {
         links: {github: 'adrianlang/hire-adrian-lang'}
     },
     'partial.js': {
-        desc: 'Partial.js is a toolkit for partial function application in ' + linkTo(['Skills', 'JavaScript']) + '. I wrote a <a href="https://ada.adrianlang.de/partial-application-js" title="The blog post »Partial function application in JavaScript«">blog post</a> on this subject in June 2011 and did two <a href="https://adrianlang.de/talks/partial2.pdf" title="Talk on partial function application in JavaScript">talks</a> on partial function application in JavaScript and partial.js at the Berlin and Hamburg JavaScript user groups.',
+        desc: 'Partial.js is a toolkit for partial function application in ' + linkTo(['Skills', 'JavaScript']) + '. I wrote a <a href="https://ada.adrianlang.de/partial-application-js" title="The blog post »Partial function application in JavaScript«">blog post</a> on this subject in <time datetime="2011-06">June 2011</time> and did two <a href="https://adrianlang.de/talks/partial2.pdf" title="Talk on partial function application in JavaScript">talks</a> on partial function application in JavaScript and partial.js at the Berlin and Hamburg JavaScript user groups.',
         links: {github: 'adrianlang/partial-js'}
     },
     'libomb': {
-        desc: 'libomb is a ' + linkTo(['Skills', 'PHP']) + ' library implementing the ' + linkTo(['Skills', 'OpenMicroBlogging'], 'OpenMicroBlogging protocol') + '. I wrote it in Summer 2009 and used it to replace the self-baked OMB implementation in ' + linkTo(['Skills', 'StatusNet']) + '.',
+        desc: 'libomb is a ' + linkTo(['Skills', 'PHP']) + ' library implementing the ' + linkTo(['Skills', 'OpenMicroBlogging'], 'OpenMicroBlogging protocol') + '. I wrote it in <time datetime="2009">Summer 2009</time> and used it to replace the self-baked OMB implementation in ' + linkTo(['Skills', 'StatusNet']) + '.',
         links: {gitorious: 'libomb'}
     }
 };
