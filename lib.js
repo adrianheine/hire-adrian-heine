@@ -39,7 +39,7 @@ lib.linkTo = function (def, path, txt) {
   if (typeof txt === 'undefined') {
     txt = path[path.length - 1];
   }
-  return '<a href="/' + path.map(lib.id).map(lib.html).join('/') + '" ' +
+  return '<a href="' + lib.html('/' + path.map(lib.id).join('/')) + '" ' +
     'title="' + lib.html(lib.longTitle(path[0], path[1])) + '">' +
     lib.html(txt) + '</a>';
 };
