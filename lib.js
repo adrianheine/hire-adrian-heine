@@ -18,8 +18,11 @@ lib.mimeType = function (subtype) {
 };
 
 lib.html = function (str) {
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  return str.replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
 };
 
 lib.id = function (item) {
