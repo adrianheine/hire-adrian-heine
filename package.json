@@ -17,7 +17,7 @@
     "less": "",
     "express": "",
     "jade": "",
-    "connect-less": "",
+    "connect-less": ""
   },
   "devDependencies": {
     "mocha": ""
