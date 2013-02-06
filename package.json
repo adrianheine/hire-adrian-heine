@@ -3,19 +3,32 @@
   "name": "hire-adrianlang-de",
   "version": "0.0.1",
   "homepage": "http://hire.adrianlang.de",
+  "description": "Online CV of Adrian Lang",
   "repository": {
     "type": "git",
     "url": "git://github.com/adrianlang/hire-adrian-lang.git"
   },
   "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
     "underscore": "",
     "less": "",
     "express": "2.x",
     "jade": ""},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": ""
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  }
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha -R spec"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "license": "APL 2"
 }
