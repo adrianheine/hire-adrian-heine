@@ -66,6 +66,8 @@ module.exports = {
     }, 'GNU/Linux': {
         score: 1 + 2 + 1, // 4 (3)
         desc: 'I exclusively run ' + linkTo('Debian', 'Debian GNU/Linux') + ' on my servers, netbook and workstation.'
+    }, 'Grunt.js': {
+        score: 1 + 1 + 1,
     }, 'Haskell': {
         score: 1 + 1 + 0, // 2 (2)
         desc: 'I love Haskell and solved <a href="https://projecteuler.net/progress=adrianlang">50 Project Euler problems</a> with it. Still, I consider everything above the basic concepts to be really black magic and whenever I read papers on or using Haskell, I occasionally reach a point where I have to concentrate really hard or even read some 100 pages of background information.'
@@ -168,6 +170,8 @@ module.exports = {
         score: 1 + 0 + 1, // 2 (2)
     }, 'Titanium': {
         score: 1 + 0 + 2, // 3 (3)
+    }, 'Twitter Bootstrap': {
+        score: 1 + 2 + 2,
     }, 'Underscore.js': {
         score: 1 + 2 + 2, // 5 (3)
         desc: 'Not much to say about it: it’s great, I use it.'
