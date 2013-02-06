@@ -16,7 +16,9 @@
     "underscore": "",
     "less": "",
     "express": "2.x",
-    "jade": ""},
+    "jade": "",
+    "connect-less": "",
+  },
   "devDependencies": {
     "mocha": ""
   },

@@ -5,12 +5,14 @@
  */
 
 var express = require('express'),
-    path = require('path'),
+    fs = require('fs'),
     lib = require('./lib'),
 
     staticDir = '/static',
-    lessDir = staticDir + '/style',
-    lessConfig = {paths: [__dirname + lessDir]};
+    lessConfig = {
+        src: __dirname + staticDir + '/style',
+        dstRoot: __dirname
+    };
 
 var app = module.exports = express.createServer();
 
@@ -21,17 +23,7 @@ app.configure(function () {
     app.set('view engine', 'jade');
     app.use(express.favicon(__dirname + '/favicon.ico'));
 
-    // Hack connect.js to allow relative @import statements in less.js
-    var less = require('less');
-    express.compiler.compilers.less.compile = function (str, fn) {
-        try {
-            less.render(str, lessConfig, fn);
-        } catch (err) {
-            fn(err);
-        }
-    };
-
-    app.use(lessDir, express.compiler({ src: __dirname + lessDir, enable: ['less'] }));
+    app.use(require('connect-less')(lessConfig));
 
     app.use(staticDir, express['static'](__dirname + staticDir, {maxAge: 1000 * 60 * 60 * 24 * 365}));
     app.use(express.logger('[:date] ":url" :status ":referrer" ":user-agent"'));
@@ -52,7 +44,7 @@ app.configure('production', function () {
 var tabs = lib.buildSubs({'Intro': {}, 'Skills': {}, 'Examples': {}, 'CV': {}, 'Contact': {}});
 
 lib.each(tabs, function (tab, tabid) {
-    if (path.existsSync(__dirname + '/subs/' + tabid + '.js')) {
+    if (fs.existsSync(__dirname + '/subs/' + tabid + '.js')) {
         tab.subs = lib.buildSubs(tab.title, require('./subs/' + tabid));
     }
 });
