@@ -20,8 +20,8 @@ module.exports = {
         score: 1 + 1 + 2, // 4 (3)
         desc: 'I read and write C code for more than 10 years. The biggest project I participated in was a C-based ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting ' + linkTo('Atmel') + ' systems. I haven’t been much of a C hacker lately, but I’m still used to browsing through and editing code like the ' + linkTo('PHP') + ' interpreter or other C-based monsters.'
     }, 'CakePHP': {
-        score: 1 + 1 + 1, // 3
-        desc: 'CakePHP is something I had to use for a customer. I know how to use it, how to look something up in the source or documentation and how to stay alive.'
+        score: 1 + 1 + 2, // 4
+        desc: 'CakePHP 1.3 is something I had to use for a customer. I know how to use it, how to look something up in the source or documentation and how to stay alive.'
     }, 'CouchDB': {
         score: 1 + 1 + 2, // 4
         desc: 'I use CouchDB for some private projects. I love the way it makes me think about database performance, and that it is completely about ' + linkTo('JavaScript') + ' and ' + linkTo('HTTP') + '.'
@@ -32,20 +32,22 @@ module.exports = {
         score: 1 + 2 + 1, // 4 (4)
         desc: 'CSS is a part of my daily work, and I apply my usual attention to it. Thus, I know my units, use CSS3 features where needed and possible and try to stay out of specificity hell. Since my ' + linkTo('HTML') + ' is semantic and non-representational, there is quite some work to do for CSS.</p><p>For ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used ' + linkTo('LESS') + ' for CSS generation and tried to apply a loose SMACSS approach. The style has certain ' + linkTo('Responsive', 'responsive design') + ' features and uses CSS3 features like media queries, box-sizing and background-size.'
     }, 'darcs': {
-        score: 1 + 1 + 0, // 2 (2)
+        score: 1 + 0 + 0, // 2 (2)
         desc: 'When I started contributing to ' + linkTo('DokuWiki') + ', it used darcs as a revision control system, but soon changed to ' + linkTo('git') + '.'
     }, 'DB2': {
         score: 1 + 1 + 0, // 2 (1)
         desc: ''
     }, 'Debian': {
         score: 1 + 2 + 2, // 5 (4)
-        desc: 'Debian ' + linkTo('GNU/Linux') + ' is the only operating system I use extensively. It powers my workstation, netbook and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice.'
+        desc: 'Debian ' + linkTo('GNU/Linux') + ' is the only operating system I use extensively. It powers my workstation, notebook and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice. I recommended it to several people and helped them installing and maintaining it.'
+    }, 'Derby.js': {
+        score: 1 + 1 + 0,
     }, 'DIME': {
         score: 1 + 0 + 0, // 1 (1)
         desc: ''
     }, 'DokuWiki': {
         score: 1 + 2 + 3, // 6 (4)
-        desc: 'I am a DokuWiki core developer, contributed a big bunch of plugins and have extensive experience running and customizing DokuWiki.</p><p>In the last year, I put much work into the migration from our plain-DOM JavaScript codebase to ' + linkTo('jQuery', 'jQuery-based') + ' code, including ' + linkTo('jQuery UI') + '.'
+        desc: 'I am a DokuWiki core developer, contributed a big bunch of plugins and have extensive experience running and customizing DokuWiki.</p><p>In <time datetime="2011">2011</time>, I put much work into the migration from our plain-DOM JavaScript codebase to ' + linkTo('jQuery', 'jQuery-based') + ' code, including ' + linkTo('jQuery UI') + '.'
     }, 'Dovecot': {
         score: 1 + 1 + 1, // 3 (2)
         desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'
@@ -56,7 +58,7 @@ module.exports = {
         score: 1 + 2 + 1, // 4 (4)
         desc: 'I used the ' + linkTo('Node.js') + ' web framework Express for two sites: ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This one') + ' and a yet-to-come relaunch of Piratenkompass. ' + linkTo('Etherpad lite') + ' uses Express as well.'
     }, 'fcgid': {
-        score: 1 + 1 + 0, // 2 (1)
+        score: 1 + 1 + 1, // 2 (1)
         desc: ''
     }, 'Flash': {
         score: 1 + 0 + 1, // 2 (1)
@@ -65,7 +67,7 @@ module.exports = {
         desc: 'git is my preferred revision control system since around 2008. I use it for every non-trivial project I start from software to Diablo II save games to presentations or applications.</p><p>I consider myself a reasonably advanced git user – features like bisect, blame, hunk index adding or rebasing are part of my daily routine. Aside from the gory details, I am able to develop git-based workflows building on tags and different kinds of branches.'
     }, 'GNU/Linux': {
         score: 1 + 2 + 1, // 4 (3)
-        desc: 'I exclusively run ' + linkTo('Debian', 'Debian GNU/Linux') + ' on my servers, netbook and workstation.'
+        desc: 'I exclusively run ' + linkTo('Debian', 'Debian GNU/Linux') + '.'
     }, 'Grunt.js': {
         score: 1 + 1 + 1,
     }, 'Haskell': {
@@ -76,10 +78,10 @@ module.exports = {
         desc: 'HTML is part of my everyday work. I like my HTML clean, semantic and valid. That’s why I’m hoping for ' + linkTo('HTML5') + ' goodness.'
     }, 'HTML5': {
         score: 1 + 1 + 1, // 3
-        desc: 'In ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used a HTML5 template and explored the new history API.'
+        desc: 'I closely follow the development around HTML and read about new features as they come up. In ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used a HTML5 template and explored the new history API.'
     }, 'HTTP': {
         score: 1 + 2 + 1, // 4
-        desc: 'My first experience with HTTP was when I used ' + linkTo('SOAP') + '. Since then, I pity the current state of HTTP usage as barely more than a stupid URL retrieving or data posting protocol. Lately, I started to like REST and its intensive use of HTTP features.'
+        desc: 'My first experience with HTTP was when I used ' + linkTo('SOAP') + '. Since then, I pity the current state of HTTP usage as barely more than a stupid URL retrieving or data posting protocol. Lately, I started to like REST and its extensive use of HTTP features.'
     }, 'Jade': {
         score: 1 + 2 + 2, // 5 (4)
         desc: 'I use Jade in my ' + linkTo('Node.js') + ' web applications together with ' + linkTo('Express') + '. I even got a <a href="https://github.com/visionmedia/jade/commit/bef63b3ebadfcbf2b079831e58d3b959123bd5ce" title="My patch for Jade">small patch</a> landed.'
@@ -113,6 +115,8 @@ module.exports = {
         score: 1 + 1 + 0, // 2 (2)
     }, 'MediaWiki': {
         score: 1 + 0 + 2, // 3 (2)
+    }, 'Meteor': {
+        score: 1 + 1 + 0,
     }, 'MIME': {
         score: 1 + 0 + 0, // 1 (1)
     }, 'MTOM': {
@@ -121,10 +125,10 @@ module.exports = {
         score: 1 + 1 + 1, // 3 (4)
     }, 'Node.js': {
         score: 1 + 1 + 1, // 3 (3)
-        desc: 'I love Node.js and use it for all my recent web development and scripting needs. I’ve done some ' + linkTo('Etherpad lite') + ' hacking  and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', which uses ' + linkTo('Express') + ' and ' + linkTo('Jade') + ' with Node.js.'
+        desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' +  linkTo('Meteor') + '.'
     }, 'nginx': {
         score: 1 + 1 + 1, // 3 (1)
-        desc: 'I start to use nginx for all my web server needs. I proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'
+        desc: 'I start to use nginx for all my web server needs. It proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'
     }, 'OAuth': {
         score: 1 + 0 + 2, // 3 (3)
     }, 'OpenMicroBlogging': {
@@ -136,7 +140,7 @@ module.exports = {
         score: 1 + 1 + 1, // 3 (1)
     }, 'PHP': {
         score: 1 + 2 + 3, // 6 (5)
-        desc: 'Probably most of my software development experience comes from my work with PHP. In 2009, I wrote the library ' + linkTo(['Examples', 'libomb']) + ' for the microblogging software ' + linkTo('StatusNet') + '.</p><p>For the last two years, my full-time job was focused on ' + linkTo('DokuWiki') + ' – core contributions, templates and plugins.</p><p>Moreover, I took a look at ' + linkTo('Kohana') + ' and did some hacking around ' + linkTo('WordPress') + '.'
+        desc: 'Probably most of my software development experience comes from my work with PHP. In <time>2009</time>, I wrote the library ' + linkTo(['Examples', 'libomb']) + ' for the microblogging software ' + linkTo('StatusNet') + '.</p><p>From <time>2009</time> till <time>2011</time>, my full-time job was focused on ' + linkTo('DokuWiki') + ' – core contributions, templates and plugins.</p><p>Moreover, I took a look at ' + linkTo('Kohana') + ' and did some hacking around ' + linkTo('WordPress') + ' including writing plugins and themes. Recently, I used ' + linkTo('CakePHP') + ' for a customer.'
     }, 'Postfix': {
         score: 1 + 1 + 1, // 3 (2)
         desc: 'Postfix together with ' + linkTo('Dovecot') + ' powers my self-administered mail server used by a small handful of people.'
@@ -153,7 +157,7 @@ module.exports = {
     }, 'Scala': {
         score: 1 + 1 + 0, // 2 (1)
     }, 'Scrum': {
-        score: 1 + 1 + 0, // 2 (2)
+        score: 1 + 1 + 1, // 2 (2)
     }, 'Shell': {
         score: 1 + 1 + 1, // 3 (3)
     }, 'SOAP': {
