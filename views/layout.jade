@@ -20,7 +20,8 @@ html(lang='de')
               li
                 a(href='/#{id}',title='#{cap.longTitle}',class=className) #{cap.title}
             - }
-    #content.content !{body}
+    #content.content
+      block content
     footer
       .block-band
         ul

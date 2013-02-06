@@ -1,9 +1,12 @@
-#focus.focus
-    include examples_sub
-ul.focussable.big-links
-  - each opts, example in tabs[cur_t].subs
-    li
-      a.li(href='/examples/#{example}',title='#{opts.longTitle}')
-        - // This is probably a dirty hack
-        - buf.push(opts.title.replace(' ', '&nbsp;'))
-      | 
+extends layouted
+
+block content
+  #focus.focus
+      include examples_sub
+  ul.focussable.big-links
+    - each opts, example in tabs[cur_t].subs
+      li
+        a.li(href='/examples/#{example}',title='#{opts.longTitle}')
+          - // This is probably a dirty hack
+          - buf.push(opts.title.replace(' ', '&nbsp;'))
+        | 

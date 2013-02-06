@@ -15,7 +15,7 @@
   "dependencies": {
     "underscore": "",
     "less": "",
-    "express": "2.x",
+    "express": "",
     "jade": "",
     "connect-less": "",
   },

@@ -1,10 +1,7 @@
-"use strict";
-
-/**
- * Module dependencies.
- */
+'use strict';
 
 var express = require('express'),
+    http = require('http'),
     fs = require('fs'),
     lib = require('./lib'),
 
@@ -14,11 +11,18 @@ var express = require('express'),
         dstRoot: __dirname
     };
 
-var app = module.exports = express.createServer();
+var app = module.exports = express();
 
 // Configuration
+if (app.get('env') === 'production') {
+    lessConfig.compress = true;
+} else {
+    lessConfig.compress = false;
+    app.use(express.errorHandler());
+}
 
 app.configure(function () {
+    app.set('port', process.env.PORT || 9002);
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
     app.use(express.favicon(__dirname + '/favicon.ico'));
@@ -26,18 +30,8 @@ app.configure(function () {
     app.use(require('connect-less')(lessConfig));
 
     app.use(staticDir, express['static'](__dirname + staticDir, {maxAge: 1000 * 60 * 60 * 24 * 365}));
-    app.use(express.logger('[:date] ":url" :status ":referrer" ":user-agent"'));
+    app.use(express.logger('dev'));
     app.use(app.router);
-});
-
-app.configure('development', function () {
-    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-    lessConfig.compress = false;
-});
-
-app.configure('production', function () {
-    app.use(express.errorHandler());
-    lessConfig.compress = true;
 });
 
 // Routes
@@ -80,6 +74,6 @@ app.get('/:tab?/:sub?', function (req, res, next) {
                 layout: !fragment});
 });
 
-app.listen(9002, '127.0.0.1', function () {
-  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("Express server listening on port %d in %s mode", app.get('port'), app.get('env'));
 });
