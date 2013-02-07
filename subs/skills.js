@@ -51,6 +51,9 @@ module.exports = {
   }, 'Dovecot': {
     score: 1 + 1 + 1, // 3 (2)
     desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'
+  }, 'Ender.js': {
+    score: 1 + 1 + 1,
+    desc: 'I recently started using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', Ender.js with the jeesh and reqwest is used for DOM manipulation and XHRs.'
   }, 'Etherpad lite': {
     score: 1 + 1 + 2, // 4
     desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue. Recently, I wrote a custom single sign-on adapter for an etherpad lite instance.'
@@ -96,7 +99,7 @@ module.exports = {
     desc: 'During my studies I made big contributions to a ' + linkTo('C', 'C-based') + ' JVM targetting embedded systems. For this work I read the whole JVM Spec several times.'
   }, 'jQuery': {
     score: 1 + 2 + 2, // 5 (6)
-    desc: 'I use jQuery for all my client-side JavaScript needs. Last year, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. On ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', jQuery is used for DOM manipulation and XHRs.'
+    desc: 'I use jQuery for all my client-side JavaScript needs. Last year, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. Recently, I started using ' + linkTo('Ender.js') + ' as a replacement.'
   }, 'jQuery UI': {
     score: 1 + 1 + 1, // 3
     desc: linkTo('DokuWiki', 'DokuWiki’s') + ' new ' + linkTo('JavaScript') + ' code uses jQuery UI for some elements.'
