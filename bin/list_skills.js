@@ -1,7 +1,7 @@
 // An utility script listing the defined skills grouped by score
 "use strict";
 
-var skills = require('./subs/skills'),
+var skills = require('../subs/skills'),
   _ = require('underscore');
 
 skills = _.map(_.groupBy(_.map(skills, function (data, skill) {
