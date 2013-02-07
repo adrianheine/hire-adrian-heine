@@ -20,7 +20,8 @@
     "connect-less": ""
   },
   "devDependencies": {
-    "mocha": ""
+    "mocha": "",
+    "ender": ""
   },
   "optionalDependencies": {},
   "engines": {
