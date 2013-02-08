@@ -3,6 +3,7 @@ extends layouted
 block content
   #focus.focus
       include skills_sub
+  h2 Skills
   ul.tagcloud.focussable
     - each opts, skill in tabs[cur_t].subs
       li(class='t#{opts.score}')

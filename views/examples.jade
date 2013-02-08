@@ -3,10 +3,14 @@ extends layouted
 block content
   #focus.focus
       include examples_sub
-  ul.focussable.big-links
-    - each opts, example in tabs[cur_t].subs
-      li
-        a.li(href='/examples/#{example}',title='#{opts.longTitle}')
-          - // This is probably a dirty hack
-          - buf.push(opts.title.replace(' ', '&nbsp;'))
-        | 
+  .focussable
+    h2 Examples
+    ul.big-links
+      - each opts, example in tabs[cur_t].subs
+        li
+          a.li(href='/examples/#{example}',title='#{opts.longTitle}')
+            | #{opts.year}: 
+            - // This is probably a dirty hack
+            - buf.push(opts.title.replace(' ', '&nbsp;'))
+            span.desc #{opts.shortdesc}
+          | 
