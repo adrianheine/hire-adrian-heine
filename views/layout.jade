@@ -23,40 +23,7 @@ html(lang='de')
     #content.content
       block content
     footer
-      .block-band
-        ul
-          li.license
-            a(href="http://creativecommons.org/licenses/by-sa/3.0/de/",rel="license")
-              img(alt="Creative Commons License",src="/static/cc-by-sa-3.0-de-88x31.png",title="Creative Commons Attribution-Share Alike 3.0 Germany License",width='88',height='31')
-          li.attribution
-            a.li(href="//adrianlang.de/id") © 2012 Adrian Lang
-      ul.tech-footer
-        li
-          ul
-            li: a.ico.mdn(href="https://developer.mozilla.org",title="Mozilla Developer Network") MDN
-            li: a.ico.html5(href="http://validator.w3.org/check/referer",title="HTML5 validation") Valid HTML5
-            li: a(href="http://jigsaw.w3.org/css-validator/check/referer",title="CSS validation") Valid CSS3
-        li
-          ul
-            li: a.ico.node(href="http://nodejs.org",title="Node.js") Node.js platform
-            li: a.ico.debian(href="http://www.debian.org",title="Debian") Debian GNU/Linux
-            li: a.ico.manitu(href="http://www.manitu.de/?partner=016afEkBV%2B3%2FULeeLBBwTnGi0ej3TpkA9BshbqimWZLZA%3D",title="Manitu") Manitu (Partner link)
-        li
-          ul
-            li
-              a(href="/static/adrianlang-cv.pdf",title="Download PDF summary") PDF summary
-            li
-              a.ico.github(href="https://github.com/adrianlang/hire-adrian-lang",title="Hire Adrian Lang on GitHub")
-                span.hal HAL
-                |&nbsp;on GitHub
-            li
-              a(href="/static/240freelancer.html",title="240 Minutes Freelancer Manifesto") 240 Minutes Freelancer
-        li
-          address
-            ul
-              li: a(href="xmpp:adrian[at]kleinrot[dot]net",title="Talk to me via Jabber: adrian [at] kleinrot [dot] net") Jabber
-              li: a(href="mailto:mail[at]adrianlang[dot]de",title="Talk to me via E-mail: mail [at] adrianlang [dot] de") E-mail
-              li: a(href="/contact",title="Hire Adrian Lang | Contact") /contact
+      include footer
     script
         // We only support browsers with history API
         if (history.pushState) {
