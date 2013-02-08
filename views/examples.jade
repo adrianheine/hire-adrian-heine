@@ -9,8 +9,5 @@ block content
       - each opts, example in tabs[cur_t].subs
         li
           a.li(href='/examples/#{example}',title='#{opts.longTitle}')
-            | #{opts.year}: 
-            - // This is probably a dirty hack
-            - buf.push(opts.title.replace(' ', '&nbsp;'))
+            | #{opts.year}: #{opts.title}
             span.desc #{opts.shortdesc}
-          | 
