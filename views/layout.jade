@@ -10,6 +10,10 @@ html(lang='de')
       h1
         a(href='/',title=tabs.intro.longTitle)
           span.group Hire
+          //- Need two times »| « for jade to output a space and a newline since
+          //- jade 0.25. Need a space and a newline for Chromium to not consider
+          //- the trailing space part of the first span in two-line display
+          | 
           | 
           span.group Adrian Lang
       nav.block-band
