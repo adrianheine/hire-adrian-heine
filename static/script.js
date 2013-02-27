@@ -19,12 +19,20 @@
       }
 
       $.ajax({
-        url: url + '?chromebug=' + mime,
+        url: url,
         // I want to get the response object, so I need to pass a
         // non-existing type so that reqwest doesn't do anything clever
         type: '__non_existing__',
         headers: { 'Accept': mime }
       }).then(function (resp) {
+        // Make sure that we got the right thing
+        var received_mime = resp.getResponseHeader('Content-Type');
+        if (received_mime !== mime) {
+          // If not, fall back to plain page loading
+          document.location = url;
+          return;
+        }
+
         target.innerHTML = resp.responseText;
 
         if (title) {
