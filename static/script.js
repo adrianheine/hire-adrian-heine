@@ -4,8 +4,8 @@
   "use strict";
 
   var load = (function () {
-    var last_loaded = null,
-      url_matcher = /^\/([^.\/]*)(?:\/([^.\/]*))?$/;
+    var url_matcher = /^\/([^.\/]*)(?:\/([^.\/]*))?$/,
+      last_loaded = String(document.location.pathname).match(url_matcher)[1];
 
     return function (url, title) {
       var target, mime, url_parsed = url.match(url_matcher);
