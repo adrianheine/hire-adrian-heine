@@ -2,6 +2,26 @@
 
 var lib = module.exports = require('underscore');
 
+lib.firstRes = function (items, test_func) {
+  var res = null;
+  items.some(lib.compose(function (this_res) {
+    return res = this_res;
+  }, test_func));
+  return res;
+};
+
+lib.html = function (str) {
+  return str.replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/'/g, '&#39;')
+    .replace(/"/g, '&quot;');
+};
+
+lib.id = function (item) {
+  return item.toLowerCase().replace(/ /g, '_').replace(/[\/.]/g, '-');
+};
+
 lib.longTitle = function (tab, title) {
   var parts = ['Hire Adrian Lang'];
   if (tab && tab !== 'Intro') {
@@ -15,18 +35,6 @@ lib.longTitle = function (tab, title) {
 
 lib.mimeType = function (subtype) {
   return 'application/prs.de.adrianlang.hire.' + subtype;
-};
-
-lib.html = function (str) {
-  return str.replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
-    .replace(/"/g, '&quot;');
-};
-
-lib.id = function (item) {
-  return item.toLowerCase().replace(/ /g, '_').replace(/[\/.]/g, '-');
 };
 
 lib.linkTo = function (def, path, txt) {
@@ -60,12 +68,4 @@ lib.buildSubs = function (tab, items) {
     }, data);
     return ret;
   }, {});
-};
-
-lib.firstRes = function (items, test_func) {
-  var res = null;
-  items.some(lib.compose(function (this_res) {
-    return res = this_res;
-  }, test_func));
-  return res;
 };
