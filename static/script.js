@@ -19,7 +19,7 @@
       }
 
       $.ajax({
-        url: url,
+        url: url + '?chromebug=' + mime,
         // I want to get the response object, so I need to pass a
         // non-existing type so that reqwest doesn't do anything clever
         type: '__non_existing__',
