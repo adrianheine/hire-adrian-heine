@@ -16,12 +16,18 @@ module.exports = {
   }, 'Atmel': {
     score: 1 + 0 + 0, // 1 (1)
     desc: 'During my studies I made several contributions to a ' + linkTo('C', 'C-based') + ' ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting Atmel systems.'
+  }, 'Backbone.js': {
+    score: 1 + 1 + 1,
   }, 'C': {
     score: 1 + 1 + 2, // 4 (3)
     desc: 'I read and write C code for more than 10 years. The biggest project I participated in was a C-based ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting ' + linkTo('Atmel') + ' systems. I haven’t been much of a C hacker lately, but I’m still used to browsing through and editing code like the ' + linkTo('PHP') + ' interpreter or other C-based monsters.'
   }, 'CakePHP': {
     score: 1 + 1 + 2, // 4
     desc: 'CakePHP 1.3 is something I had to use for a customer. I know how to use it, how to look something up in the source or documentation and how to stay alive.'
+  }, 'CoffeeScript': {
+    score: 1 + 1 + 2
+  }, 'Compound.js': {
+    score: 1 + 1 + 2
   }, 'CouchDB': {
     score: 1 + 1 + 2, // 4
     desc: 'I use CouchDB for some private projects. I love the way it makes me think about database performance, and that it is completely about ' + linkTo('JavaScript') + ' and ' + linkTo('HTTP') + '.'
@@ -31,20 +37,20 @@ module.exports = {
   }, 'CSS': {
     score: 1 + 2 + 1, // 4 (4)
     desc: 'CSS is a part of my daily work, and I apply my usual attention to it. Thus, I know my units, use CSS3 features where needed and possible and try to stay out of specificity hell. Since my ' + linkTo('HTML') + ' is semantic and non-representational, there is quite some work to do for CSS.</p><p>For ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used ' + linkTo('LESS') + ' for CSS generation and tried to apply a loose SMACSS approach. The style has certain ' + linkTo('Responsive', 'responsive design') + ' features and uses CSS3 features like media queries, box-sizing and background-size.'
+  }, 'D3.js': {
+    score: 1 + 1 + 1
   }, 'darcs': {
     score: 1 + 0 + 0, // 2 (2)
     desc: 'When I started contributing to ' + linkTo('DokuWiki') + ', it used darcs as a revision control system, but soon changed to ' + linkTo('git') + '.'
   }, 'DB2': {
     score: 1 + 1 + 0, // 2 (1)
-    desc: ''
   }, 'Debian': {
     score: 1 + 2 + 2, // 5 (4)
     desc: 'Debian ' + linkTo('GNU/Linux') + ' is the only operating system I use extensively. It powers my workstation, notebook and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice. I recommended it to several people and helped them installing and maintaining it.'
   }, 'Derby.js': {
-    score: 1 + 1 + 0,
+    score: 1 + 1 + 1,
   }, 'DIME': {
     score: 1 + 0 + 0, // 1 (1)
-    desc: ''
   }, 'DokuWiki': {
     score: 1 + 2 + 3, // 6 (4)
     desc: 'I am a DokuWiki core developer, contributed a big bunch of plugins and have extensive experience running and customizing DokuWiki.</p><p>In <time datetime="2011">2011</time>, I put much work into the migration from our plain-DOM JavaScript codebase to ' + linkTo('jQuery', 'jQuery-based') + ' code, including ' + linkTo('jQuery UI') + '.'
@@ -56,13 +62,12 @@ module.exports = {
     desc: 'I recently started using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', Ender.js with the jeesh and reqwest is used for DOM manipulation and XHRs.'
   }, 'Etherpad lite': {
     score: 1 + 1 + 2, // 4
-    desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue. Recently, I wrote a custom single sign-on adapter for an etherpad lite instance.'
+    desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue. In 2012, I wrote a custom single sign-on adapter for an etherpad lite instance.'
   }, 'Express': {
-    score: 1 + 2 + 1, // 4 (4)
-    desc: 'I used the ' + linkTo('Node.js') + ' web framework Express for two sites: ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This one') + ' and a yet-to-come relaunch of Piratenkompass. ' + linkTo('Etherpad lite') + ' uses Express as well.'
+    score: 1 + 2 + 2, // 4 (4)
+    desc: 'I used the ' + linkTo('Node.js') + ' web framework Express in several projects. ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This website') + ' is powered by Express, ' + linkTo('Etherpad lite') + ' uses Express as well, and I also used the frameworks ' + linkTo('Compound.js') + ' and ' + linkTo('Derby.js') + ', which both use Express. I also have experience with ' + linkTo('Restify') + ', which mimicks Express’ API.'
   }, 'fcgid': {
     score: 1 + 1 + 1, // 2 (1)
-    desc: ''
   }, 'Flash': {
     score: 1 + 0 + 1, // 2 (1)
   }, 'git': {
@@ -120,6 +125,8 @@ module.exports = {
     score: 1 + 0 + 2, // 3 (2)
   }, 'Meteor': {
     score: 1 + 1 + 0,
+  }, 'Mocha': {
+    score: 1 + 2 + 2,
   }, 'MIME': {
     score: 1 + 0 + 0, // 1 (1)
   }, 'MTOM': {
@@ -147,12 +154,18 @@ module.exports = {
   }, 'Postfix': {
     score: 1 + 1 + 1, // 3 (2)
     desc: 'Postfix together with ' + linkTo('Dovecot') + ' powers my self-administered mail server used by a small handful of people.'
+  }, 'PostgreSQL': {
+    score: 1 + 1 + 1,
   }, 'RegExp': {
     score: 1 + 2 + 2, // 5 (4)
     desc: 'I love regular expressions. Often, my first solution to a string parsing problem is a regular expression (as long as it is <a href="http://stackoverflow.com/a/1732454/55965" title="»Have you tried using an XML parser instead?« on Stack Overflow">not HTML</a>.'
+  }, 'Require.js': {
+    score: 1 + 1 + 1,
   }, 'Responsive': {
     score: 1 + 1 + 2, // 4
     desc: 'When I first heard of responsive design, it struck me as a great answer to the huge diversity of clients out there. I like the constraints it puts on minimalism and strict separation of content, presentation and behaviour – ' + linkTo('HTML') + ', ' + linkTo('CSS') + ' and ' + linkTo ('JavaScript', 'JS') + '.</p><p>' + linkTo(['Examples', 'Hire Adrian Lang']) + ' features a tiny bit of responsiveness. I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.'
+  }, 'Restify': {
+    score: 1 + 1 + 1,
   }, 'Ruby': {
     score: 1 + 0 + 1, // 2 (1)
   }, 'Ruby on Rails': {
@@ -161,6 +174,10 @@ module.exports = {
     score: 1 + 1 + 0, // 2 (1)
   }, 'Scrum': {
     score: 1 + 1 + 1, // 2 (2)
+  }, 'Sequelize': {
+    score: 1 + 1 + 1,
+  }, 'Sinon.js': {
+    score: 1 + 1 + 1,
   }, 'Shell': {
     score: 1 + 1 + 1, // 3 (3)
   }, 'SOAP': {
@@ -175,6 +192,8 @@ module.exports = {
     score: 1 + 1 + 1, // 3 (2)
   }, 'Subversion': {
     score: 1 + 0 + 1, // 2 (2)
+  }, 'Test-driven': {
+    score: 1 + 2 + 2,
   }, 'Titanium': {
     score: 1 + 0 + 2, // 3 (3)
   }, 'Twitter Bootstrap': {
@@ -198,7 +217,7 @@ module.exports = {
     score: 1 + 1.5 + 1.5, // 4 (2)
     desc: 'I maintain several WordPress installations, made some theming efforts and wrote WordPress plugins.'
   }, 'XML': {
-    score: 1 + 1 + 1 // 3 (3)
+    score: 1 + 1 + 2 // 3 (3)
   }, 'XP': {
     score: 1 + 1 + 0, // 2 (1)
   }
