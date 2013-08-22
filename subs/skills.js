@@ -10,7 +10,13 @@ var lib = require('../lib'),
  * Hipness (0-1) (Whatever, Paint it big!)
  */
 module.exports = {
-  'Apache': {
+  'Agile': {
+    score: 1 + 1 + 1,
+    desc: ''
+  }, 'Angular': {
+    score: 1 + 1 + 1,
+    desc: ''
+  }, 'Apache': {
     score: 1 + 2 + 1, // 4 (3)
     desc: 'Apache has been my first choice for web servers for several years. Lately, I started investigating ' + linkTo('nginx') + ' as well.</p><p>I successfully deployed web applications with Apache using ' + linkTo('PHP', 'mod_php') + ', ' + linkTo('fcgid', 'mod_fcgid') + ' and ' + linkTo('Ruby on Rails', 'mod_passenger') + '.'
   }, 'Atmel': {
