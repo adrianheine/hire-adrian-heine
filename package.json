@@ -16,7 +16,7 @@
     "underscore": "",
     "less": "",
     "express": "3",
-    "jade": "",
+    "jade": "0",
     "connect-less": ""
   },
   "devDependencies": {
