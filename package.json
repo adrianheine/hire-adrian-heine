@@ -15,7 +15,7 @@
   "dependencies": {
     "less": "",
     "express": "3",
-    "jade": "0",
+    "pug": "",
     "connect-less": ""
   },
   "devDependencies": {

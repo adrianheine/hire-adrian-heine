@@ -6,8 +6,8 @@ block content
   .focussable
     h2 Examples
     ul.big-links
-      - each opts, example in tabs[cur_t].subs
+      each opts, example in tabs[cur_t].subs
         li
-          a.li(href='/examples/#{example}',title='#{opts.longTitle}')
+          a.li(href='/examples/' + example, title=opts.longTitle)
             | #{opts.year}: #{opts.title}
             span.desc #{opts.shortdesc}

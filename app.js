@@ -24,7 +24,7 @@ if (app.get('env') === 'production') {
 app.configure(function () {
   app.set('port', process.env.PORT || 9002);
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  app.set('view engine', 'pug');
   app.use(express.favicon(__dirname + '/favicon.ico'));
 
   app.use(require('connect-less')(lessConfig));

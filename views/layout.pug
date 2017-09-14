@@ -1,4 +1,4 @@
-!!! 5
+doctype html
 html(lang='de')
   head
     meta(charset='utf-8')
@@ -19,17 +19,17 @@ html(lang='de')
           span.group Adrian Heine
       nav.block-band
         ul
-          - each cap, id in tabs
+          each cap, id in tabs
             - if (id !== 'intro') {
               - className = 'li' + (id === cur_t ? ' active' : '')
               li
-                a(href='/#{id}',title='#{cap.longTitle}',class=className) #{cap.title}
+                a(href='/' + id,title=cap.longTitle,class=className) #{cap.title}
             - }
     #content.content
       block content
     footer
       include footer
-    script
+    script.
         // We only support browsers with history API
         if (history.pushState) {
             window.onload = function () {
