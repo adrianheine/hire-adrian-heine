@@ -1,4 +1,3 @@
-/*jslint white:true*/
 "use strict";
 var lib = require('../lib'),
   linkTo = lib.linkTo.bind(undefined, 'Skills');
@@ -23,7 +22,7 @@ module.exports = {
     score: 1 + 0 + 0,
     desc: 'During my studies I made several contributions to a ' + linkTo('C', 'C-based') + ' ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting Atmel systems.'
   }, 'Backbone.js': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'C': {
     score: 1 + 1 + 2,
     desc: 'I read and write C code for more than 10 years. The biggest project I participated in was a C-based ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting ' + linkTo('Atmel') + ' systems. I haven’t been much of a C hacker lately, but I’m still used to browsing through and editing code like the ' + linkTo('PHP') + ' interpreter or other C-based monsters.'
@@ -49,14 +48,14 @@ module.exports = {
     score: 1 + 0 + 0,
     desc: 'When I started contributing to ' + linkTo('DokuWiki') + ', it used darcs as a revision control system, but soon changed to ' + linkTo('git') + '.'
   }, 'DB2': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'Debian': {
     score: 1 + 2 + 2,
     desc: 'Debian ' + linkTo('GNU/Linux') + ' is the only operating system I use extensively. It powers my workstation, notebooks and servers. Depending on the use-case I run every available suite from stable to experimental and combinations of them.</p><p>I am accustomed to building and hacking packages myself from time to time, I even created a dpkg package myself once or twice. I recommended it to several people and helped them installing and maintaining it.'
   }, 'Derby.js': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'DIME': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'DokuWiki': {
     score: 1 + 0 + 3,
     desc: 'I used to be a DokuWiki core developer, contributed a big bunch of plugins and have extensive experience running and customizing DokuWiki.</p><p>In <time datetime="2011">2011</time>, I put much work into the migration from DokuWiki\'s plain-DOM JavaScript codebase to ' + linkTo('jQuery', 'jQuery-based') + ' code, including ' + linkTo('jQuery UI') + '.'
@@ -73,19 +72,19 @@ module.exports = {
     score: 1 + 1 + 2,
     desc: 'I used the ' + linkTo('Node.js') + ' web framework Express in several projects. ' + linkTo(['Examples', 'Hire Adrian Heine'], 'This website') + ' is powered by Express, ' + linkTo('Etherpad lite') + ' uses Express as well, and I also used the frameworks ' + linkTo('Compound.js') + ' and ' + linkTo('Derby.js') + ', which both use Express. I also have experience with ' + linkTo('Restify') + ', which mimicks Express’ API.'
   }, 'fcgid': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'Flash': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'git': {
     score: 1 + 2 + 2,
     desc: 'git is my preferred revision control system since around 2008. I use it for every non-trivial project I start from software to Diablo II save games to presentations or applications.</p><p>I consider myself a reasonably advanced git user – features like bisect, blame, hunk index adding or rebasing are part of my daily routine. Aside from the gory details, I am able to develop git-based workflows building on tags and different kinds of branches.'
   }, 'GDB': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'GNU/Linux': {
     score: 1 + 2 + 1,
     desc: 'I exclusively run ' + linkTo('Debian', 'Debian GNU/Linux') + '.'
   }, 'Grunt.js': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'Haskell': {
     score: 1 + 1 + 0,
     desc: 'I love Haskell and solved <a href="https://projecteuler.net/progress=adrianlang">50 Project Euler problems</a> with it. Still, I consider everything above the basic concepts to be really black magic and whenever I read papers on or using Haskell, I occasionally reach a point where I have to concentrate really hard or even read some 100 pages of background information.'
@@ -123,7 +122,7 @@ module.exports = {
     score: 1 + 2 + 3,
     desc: linkTo('MediaWiki') + ' and ' + linkTo('Wikibase') + ' use jQuery UI a lot. I have extensive experience fighting it and the bad code architecture it\'s widget system suggests. Also, ' + linkTo('DokuWiki', 'DokuWiki’s') + ' new ' + linkTo('JavaScript') + ' code uses jQuery UI for some elements.'
   }, 'Kohana': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'LaTeX': {
     score: 1 + 1 + 2,
     desc: 'I write all my paperwork and presentations in LaTeX.'
@@ -137,35 +136,35 @@ module.exports = {
     score: 1 + 1 + 1,
     desc: 'I used LESS for ' + linkTo(['Examples', 'Hire Adrian Heine']) + ' and once migrated ' + linkTo('DokuWiki', 'DokuWiki’s') + ' custom ' + linkTo('CSS') + ' build system to lessphp as an experiment.'
   }, 'MacOS X': {
-    score: 1 + 1 + 0,
+    score: 1 + 1 + 0
   }, 'MediaWiki': {
     score: 1 + 2 + 3,
     desc: 'I have extensive experience running, using, hacking and extending MediaWiki.'
   }, 'Meteor': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'Mocha': {
-    score: 1 + 1 + 2,
+    score: 1 + 1 + 2
   }, 'MIME': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'MTOM': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'MySQL': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'Node.js': {
     score: 1 + 2 + 1,
-    desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' +  linkTo('Meteor') + '.'
+    desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' + linkTo('Meteor') + '.'
   }, 'nginx': {
     score: 1 + 2 + 1, // 3 (1)
     desc: 'I use nginx for all my web server needs. It proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'
   }, 'OAuth': {
-    score: 1 + 0 + 2,
+    score: 1 + 0 + 2
   }, 'OpenMicroBlogging': {
     score: 1 + 0 + 3,
     desc: 'I wrote the library ' + linkTo(['Examples', 'libomb']) + ' which is one of the few OpenMicroBlogging implementations. OMB has been obsoleted by oStatus, though.'
   }, 'OpenID': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'OTRS': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'PHP': {
     score: 1 + 2 + 3,
     desc: 'Probably most of my software development experience comes from my work with PHP. In <time>2009</time>, I wrote the library ' + linkTo(['Examples', 'libomb']) + ' for the microblogging software ' + linkTo('StatusNet') + '.</p><p>From <time>2009</time> till <time>2011</time>, my full-time job was focused on ' + linkTo('DokuWiki') + ' – core contributions, templates and plugins.</p><p>Moreover, I took a look at ' + linkTo('Kohana') + ' and did some hacking around ' + linkTo('WordPress') + ' including writing plugins and themes. In 2012, I used ' + linkTo('CakePHP') + ' for a customer. Since 2014, I\'ve been working a lot with PHP again, exploiting the type system improvements in recent versions and trying out ' + linkTo('HHVM') + '.'
@@ -173,55 +172,55 @@ module.exports = {
     score: 1 + 1 + 1,
     desc: 'Postfix together with ' + linkTo('Dovecot') + ' powers my self-administered mail server used by a small handful of people.'
   }, 'PostgreSQL': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'QUnit': {
     score: 1 + 1 + 1
   }, 'React.js': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'RegExp': {
     score: 1 + 2 + 2,
     desc: 'I love regular expressions. Often, my first solution to a string parsing problem is a regular expression (as long as it is <a href="http://stackoverflow.com/a/1732454/55965" title="»Have you tried using an XML parser instead?« on Stack Overflow">not HTML</a>.'
   }, 'Require.js': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'Responsive': {
     score: 1 + 1 + 2,
-    desc: 'When I first heard of responsive design, it struck me as a great answer to the huge diversity of clients out there. I like the constraints it puts on minimalism and strict separation of content, presentation and behaviour – ' + linkTo('HTML') + ', ' + linkTo('CSS') + ' and ' + linkTo ('JavaScript', 'JS') + '.</p><p>' + linkTo(['Examples', 'Hire Adrian Heine']) + ' features a tiny bit of responsiveness. I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.'
+    desc: 'When I first heard of responsive design, it struck me as a great answer to the huge diversity of clients out there. I like the constraints it puts on minimalism and strict separation of content, presentation and behaviour – ' + linkTo('HTML') + ', ' + linkTo('CSS') + ' and ' + linkTo('JavaScript', 'JS') + '.</p><p>' + linkTo(['Examples', 'Hire Adrian Heine']) + ' features a tiny bit of responsiveness. I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.'
   }, 'Restify': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'Ruby': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'Ruby on Rails': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'Rust': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'Scala': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'Scrum': {
-    score: 1 + 2 + 2,
+    score: 1 + 2 + 2
   }, 'Sequelize': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'Sinon.js': {
-    score: 1 + 2 + 1,
+    score: 1 + 2 + 1
   }, 'Shell': {
-    score: 1 + 2 + 1,
+    score: 1 + 2 + 1
   }, 'SOAP': {
-    score: 1 + 0 + 2,
+    score: 1 + 0 + 2
   }, 'Solaris': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'StatusNet': {
-    score: 1 + 0 + 2,
+    score: 1 + 0 + 2
   }, 'SQL': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'SQLite': {
-    score: 1 + 1 + 1,
+    score: 1 + 1 + 1
   }, 'Subversion': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'Test-driven': {
-    score: 1 + 2 + 2,
+    score: 1 + 2 + 2
   }, 'Titanium': {
-    score: 1 + 0 + 2,
+    score: 1 + 0 + 2
   }, 'Twitter Bootstrap': {
-    score: 1 + 1 + 2,
+    score: 1 + 1 + 2
   }, 'Underscore.js': {
     score: 1 + 1 + 2,
     desc: 'Not much to say about it: it’s great, I use it.'
@@ -229,9 +228,9 @@ module.exports = {
     score: 1 + 2 + 1,
     desc: 'I use vim for everything, but I’m still stuck with rather basic editing functionality.'
   }, 'Visual C++': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'VxWorks': {
-    score: 1 + 0 + 0,
+    score: 1 + 0 + 0
   }, 'Wikibase': {
     score: 1 + 2 + 3,
     desc: 'I am one of the main developers of Wikibase.'
@@ -241,14 +240,14 @@ module.exports = {
     score: 1 + 1 + 3,
     desc: 'I used to be an admin at the German Wikipedia and at Wikimedia Commons, wrote honored articles at the German Wikipedia and was a member of the German e-mail support and response team.'
   }, 'Windows': {
-    score: 1 + 0 + 1,
+    score: 1 + 0 + 1
   }, 'WordPress': {
     score: 1 + 1 + 1,
     desc: 'I maintain several WordPress installations, made some theming efforts and wrote WordPress plugins.'
   }, 'XML': {
     score: 1 + 1 + 2
   }, 'XP': {
-    score: 1 + 1 + 0,
+    score: 1 + 1 + 0
   }
 };
 

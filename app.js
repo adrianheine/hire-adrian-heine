@@ -51,7 +51,8 @@ app.get('/:tab?/:sub?', function (req, res, next) {
 
   if (!tabs.hasOwnProperty(cur_t) ||
       (sub && !tabs[cur_t].subs.hasOwnProperty(sub))) {
-    return next();
+    next();
+    return;
   }
 
   if (!req.accepts('html')) {

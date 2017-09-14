@@ -20,7 +20,7 @@ lib.html = function (str) {
 };
 
 lib.id = function (item) {
-  return item.toLowerCase().replace(/ /g, '_').replace(/[\/.]/g, '-');
+  return item.toLowerCase().replace(/ /g, '_').replace(/[/.]/g, '-');
 };
 
 lib.longTitle = function (tab, title) {

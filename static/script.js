@@ -1,10 +1,8 @@
-/*jslint node:false,browser:true*/
-/*global $*/
 (function () {
   "use strict";
 
   var load = (function () {
-    var url_matcher = /^\/([^.\/]*)(?:\/([^.\/]*))?$/,
+    var url_matcher = /^\/([^./]*)(?:\/([^./]*))?$/,
       last_loaded = String(document.location.pathname).match(url_matcher)[1];
 
     return function (url, title) {

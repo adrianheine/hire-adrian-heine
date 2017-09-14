@@ -19,18 +19,19 @@
     "connect-less": ""
   },
   "devDependencies": {
-    "mocha": "",
-    "ender": ""
+    "ender": "",
+    "eslint": "^4.6.1",
+    "mocha": ""
   },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha -R spec"
+    "test": "eslint . && mocha -R spec"
   },
   "keywords": [
     "cv"
   ],
-  "license": "APL 2"
+  "license": "Apache-2.0"
 }
