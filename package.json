@@ -19,9 +19,8 @@
     "connect-less": ""
   },
   "devDependencies": {
-    "ender": "",
     "eslint": "^4.6.1",
-    "mocha": ""
+    "mocha": "^3.5.3"
   },
   "optionalDependencies": {},
   "engines": {
