@@ -1,12 +1,13 @@
 "use strict";
 
-var lib = module.exports = require('underscore');
+var lib = module.exports;
 
 lib.firstRes = function (items, test_func) {
   var res = null;
-  items.some(lib.compose(function (this_res) {
-    return res = this_res;
-  }, test_func));
+  items.some(function (item) {
+    res = test_func(item);
+    return res;
+  });
   return res;
 };
 
@@ -61,8 +62,9 @@ lib.buildSubs = function (tab, items) {
     items = tab;
   }
 
-  return lib.reduce(items, function (ret, data, item) {
-    ret[lib.id(item)] = lib.extend({
+  return Object.keys(items).reduce(function (ret, item) {
+    let data = items[item];
+    ret[lib.id(item)] = Object.assign({
       title: item,
       longTitle: longTitle(item)
     }, data);

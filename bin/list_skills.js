@@ -1,20 +1,16 @@
 // An utility script listing the defined skills grouped by score
 "use strict";
 
-var skills = require('../subs/skills'),
-  _ = require('underscore');
+var skills = require('../subs/skills');
 
-skills = _.map(_.groupBy(_.map(skills, function (data, skill) {
-  return {
-    score: data.score,
-    title: skill + (data.desc === 'No description yet, sorry.' ? '(!)' : '')
-  };
-}), function (skill) {
-  return skill.score;
-}), function (group) {
-  return _.pluck(group, 'title');
-});
+skills = Object.keys(skills).reduce(function (result, skill) {
+  let data = skills[skill];
+  result[data.score] = result[data.score] || [];
+  result[data.score].push(skill + (data.desc === 'No description yet, sorry.' ? '(!)' : ''));
+  return result;
+}, {})
 
-_.each(skills, function (g) {
-  console.log(String(g.length), ':', g.join(', '), '\n');
+Object.keys(skills).forEach(function (k) {
+  let g = skills[k];
+  console.log("%d: %s\n", g.length, g.join(', '));
 });

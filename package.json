@@ -13,7 +13,6 @@
     "test": "test"
   },
   "dependencies": {
-    "underscore": "",
     "less": "",
     "express": "3",
     "jade": "0",

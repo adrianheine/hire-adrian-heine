@@ -37,7 +37,8 @@ app.configure(function () {
 // Routes
 var tabs = lib.buildSubs({'Intro': {}, 'Skills': {}, 'Examples': {}, 'CV': {}, 'Contact': {}});
 
-lib.each(tabs, function (tab, tabid) {
+Object.keys(tabs).forEach(function (tabid) {
+  let tab = tabs[tabid];
   if (fs.existsSync(__dirname + '/subs/' + tabid + '.js')) {
     tab.subs = lib.buildSubs(tab.title, require('./subs/' + tabid));
   }

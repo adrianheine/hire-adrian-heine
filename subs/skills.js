@@ -252,6 +252,7 @@ module.exports = {
   }
 };
 
-lib.each(module.exports, function (skill) {
+Object.keys(module.exports).forEach(function (skillName) {
+  let skill = module.exports[skillName];
   skill.desc = skill.desc || 'No description yet, sorry.';
 });
