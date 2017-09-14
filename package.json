@@ -1,12 +1,12 @@
 {
-  "author": "Adrian Lang <mail@adrianlang.de> (http://hire.adrianlang.de)",
-  "name": "hire-adrianlang-de",
+  "author": "Adrian Heine <mail@adrianheine.de> (http://hire.adrianheine.de)",
+  "name": "hire-adrianheine-de",
   "version": "0.0.1",
-  "homepage": "http://hire.adrianlang.de",
-  "description": "Online CV of Adrian Lang",
+  "homepage": "http://hire.adrianheine.de",
+  "description": "Online CV of Adrian Heine",
   "repository": {
     "type": "git",
-    "url": "git://github.com/adrianlang/hire-adrian-lang.git"
+    "url": "git://github.com/adrianheine/hire-adrian-heine.git"
   },
   "main": "app.js",
   "directories": {

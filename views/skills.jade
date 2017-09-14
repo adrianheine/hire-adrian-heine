@@ -7,7 +7,7 @@ block content
   ul.tagcloud.focussable
     - each opts, skill in tabs[cur_t].subs
       li(class='t#{opts.score}')
-        a(href='/skills/#{skill}',title='Hire Adrian Lang | Skills | #{opts.title}')
+        a(href='/skills/#{skill}',title='Hire Adrian Heine | Skills | #{opts.title}')
           - // This is probably a dirty hack
           - buf.push(opts.title.replace(/ /g, '&nbsp;'))
         | 

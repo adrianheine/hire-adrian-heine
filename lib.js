@@ -23,7 +23,7 @@ lib.id = function (item) {
 };
 
 lib.longTitle = function (tab, title) {
-  var parts = ['Hire Adrian Lang'];
+  var parts = ['Hire Adrian Heine'];
   if (tab && tab !== 'Intro') {
     parts.push(tab);
   }

@@ -42,7 +42,7 @@ module.exports = {
     desc: 'Many C++ concepts like <abbr title="Template Meta-Programming">TMP</abbr> or operator overloading strike me as elegant or powerful (and sometimes even both at the same time). Unfortunately, my practical experience is limited to some small projects using g++ and ' + linkTo('Visual C++') + '.'
   }, 'CSS': {
     score: 1 + 2 + 1,
-    desc: 'CSS is a part of my daily work, and I apply my usual attention to it. Thus, I know my units, use CSS3 features where needed and possible and try to stay out of specificity hell. Since my ' + linkTo('HTML') + ' is semantic and non-representational, there is quite some work to do for CSS.</p><p>For ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used ' + linkTo('LESS') + ' for CSS generation and tried to apply a loose SMACSS approach. The style has certain ' + linkTo('Responsive', 'responsive design') + ' features and uses CSS3 features like media queries, box-sizing and background-size.'
+    desc: 'CSS is a part of my daily work, and I apply my usual attention to it. Thus, I know my units, use CSS3 features where needed and possible and try to stay out of specificity hell. Since my ' + linkTo('HTML') + ' is semantic and non-representational, there is quite some work to do for CSS.</p><p>For ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I used ' + linkTo('LESS') + ' for CSS generation and tried to apply a loose SMACSS approach. The style has certain ' + linkTo('Responsive', 'responsive design') + ' features and uses CSS3 features like media queries, box-sizing and background-size.'
   }, 'D3.js': {
     score: 1 + 0 + 1
   }, 'darcs': {
@@ -65,13 +65,13 @@ module.exports = {
     desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'
   }, 'Ender.js': {
     score: 1 + 0 + 1,
-    desc: 'I recently started using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ', Ender.js with the jeesh and reqwest is used for DOM manipulation and XHRs.'
+    desc: 'I recently started using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ', Ender.js with the jeesh and reqwest is used for DOM manipulation and XHRs.'
   }, 'Etherpad lite': {
     score: 1 + 0 + 2,
     desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue. In 2012, I wrote a custom single sign-on adapter for an etherpad lite instance.'
   }, 'Express': {
     score: 1 + 1 + 2,
-    desc: 'I used the ' + linkTo('Node.js') + ' web framework Express in several projects. ' + linkTo(['Examples', 'Hire Adrian Lang'], 'This website') + ' is powered by Express, ' + linkTo('Etherpad lite') + ' uses Express as well, and I also used the frameworks ' + linkTo('Compound.js') + ' and ' + linkTo('Derby.js') + ', which both use Express. I also have experience with ' + linkTo('Restify') + ', which mimicks Express’ API.'
+    desc: 'I used the ' + linkTo('Node.js') + ' web framework Express in several projects. ' + linkTo(['Examples', 'Hire Adrian Heine'], 'This website') + ' is powered by Express, ' + linkTo('Etherpad lite') + ' uses Express as well, and I also used the frameworks ' + linkTo('Compound.js') + ' and ' + linkTo('Derby.js') + ', which both use Express. I also have experience with ' + linkTo('Restify') + ', which mimicks Express’ API.'
   }, 'fcgid': {
     score: 1 + 1 + 1,
   }, 'Flash': {
@@ -97,7 +97,7 @@ module.exports = {
     desc: 'HTML is part of my everyday work. I like my HTML clean, semantic and valid. That’s why I’m hoping for ' + linkTo('HTML5') + ' goodness.'
   }, 'HTML5': {
     score: 1 + 1 + 1,
-    desc: 'I closely follow the development around HTML and read about new features as they come up. In ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I used a HTML5 template and explored the new history API.'
+    desc: 'I closely follow the development around HTML and read about new features as they come up. In ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I used a HTML5 template and explored the new history API.'
   }, 'HTTP': {
     score: 1 + 2 + 1,
     desc: 'My first experience with HTTP was when I used ' + linkTo('SOAP') + '. Since then, I pity the current state of HTTP usage as barely more than a stupid URL retrieving or data posting protocol. Lately, I started to like REST and its extensive use of HTTP features.'
@@ -118,7 +118,7 @@ module.exports = {
     desc: 'During my studies I made big contributions to a ' + linkTo('C', 'C-based') + ' JVM targetting embedded systems. For this work I read the whole JVM Spec several times.'
   }, 'jQuery': {
     score: 1 + 2 + 2,
-    desc: 'I use jQuery for most of my client-side JavaScript needs. In 2011, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. For ' + linkTo(['Examples', 'Hire Adrian Lang']) + ', I started using ' + linkTo('Ender.js') + ' as a replacement.'
+    desc: 'I use jQuery for most of my client-side JavaScript needs. In 2011, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. For ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I started using ' + linkTo('Ender.js') + ' as a replacement.'
   }, 'jQuery UI': {
     score: 1 + 2 + 3,
     desc: linkTo('MediaWiki') + ' and ' + linkTo('Wikibase') + ' use jQuery UI a lot. I have extensive experience fighting it and the bad code architecture it\'s widget system suggests. Also, ' + linkTo('DokuWiki', 'DokuWiki’s') + ' new ' + linkTo('JavaScript') + ' code uses jQuery UI for some elements.'
@@ -135,7 +135,7 @@ module.exports = {
     desc: 'I love working with legacy code. I\'m usually trying to get it testable first, then refactor as I need. I love the knowledge encoded in grown code, and I try to make use of that knowledge instead of just throwing it away by rewriting from scratch.'
   }, 'LESS': {
     score: 1 + 1 + 1,
-    desc: 'I used LESS for ' + linkTo(['Examples', 'Hire Adrian Lang']) + ' and once migrated ' + linkTo('DokuWiki', 'DokuWiki’s') + ' custom ' + linkTo('CSS') + ' build system to lessphp as an experiment.'
+    desc: 'I used LESS for ' + linkTo(['Examples', 'Hire Adrian Heine']) + ' and once migrated ' + linkTo('DokuWiki', 'DokuWiki’s') + ' custom ' + linkTo('CSS') + ' build system to lessphp as an experiment.'
   }, 'MacOS X': {
     score: 1 + 1 + 0,
   }, 'MediaWiki': {
@@ -153,7 +153,7 @@ module.exports = {
     score: 1 + 1 + 1,
   }, 'Node.js': {
     score: 1 + 2 + 1,
-    desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Lang'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' +  linkTo('Meteor') + '.'
+    desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' +  linkTo('Meteor') + '.'
   }, 'nginx': {
     score: 1 + 2 + 1, // 3 (1)
     desc: 'I use nginx for all my web server needs. It proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'
@@ -185,7 +185,7 @@ module.exports = {
     score: 1 + 0 + 1,
   }, 'Responsive': {
     score: 1 + 1 + 2,
-    desc: 'When I first heard of responsive design, it struck me as a great answer to the huge diversity of clients out there. I like the constraints it puts on minimalism and strict separation of content, presentation and behaviour – ' + linkTo('HTML') + ', ' + linkTo('CSS') + ' and ' + linkTo ('JavaScript', 'JS') + '.</p><p>' + linkTo(['Examples', 'Hire Adrian Lang']) + ' features a tiny bit of responsiveness. I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.'
+    desc: 'When I first heard of responsive design, it struck me as a great answer to the huge diversity of clients out there. I like the constraints it puts on minimalism and strict separation of content, presentation and behaviour – ' + linkTo('HTML') + ', ' + linkTo('CSS') + ' and ' + linkTo ('JavaScript', 'JS') + '.</p><p>' + linkTo(['Examples', 'Hire Adrian Heine']) + ' features a tiny bit of responsiveness. I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.'
   }, 'Restify': {
     score: 1 + 0 + 1,
   }, 'Ruby': {
