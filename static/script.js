@@ -25,7 +25,7 @@
       }).then(function (resp) {
         // Make sure that we got the right thing
         var received_mime = resp.getResponseHeader('Content-Type');
-        if (received_mime !== mime) {
+        if (received_mime.substr(0, mime.length + 1) !== mime + ';') {
           // If not, fall back to plain page loading
           document.location = url;
           return;

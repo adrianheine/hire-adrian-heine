@@ -13,10 +13,12 @@
     "test": "test"
   },
   "dependencies": {
+    "connect-less": "",
+    "express": "4",
     "less": "",
-    "express": "3",
+    "morgan": "^1.8.2",
     "pug": "",
-    "connect-less": ""
+    "serve-favicon": "^2.4.4"
   },
   "devDependencies": {
     "eslint": "^4.6.1"

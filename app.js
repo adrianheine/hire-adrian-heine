@@ -1,40 +1,30 @@
 'use strict';
 
-var express = require('express'),
-  http = require('http'),
-  fs = require('fs'),
-  lib = require('./lib'),
+const http = require('http');
+const fs = require('fs');
 
-  staticDir = '/static',
-  lessConfig = {
-    src: __dirname + staticDir + '/style',
-    dstRoot: __dirname
-  };
+const express = require('express');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
 
-var app = module.exports = express();
+const lib = require('./lib');
 
-// Configuration
-if (app.get('env') === 'production') {
-  lessConfig.compress = true;
-} else {
-  lessConfig.compress = false;
-  app.use(express.errorHandler());
-}
+const staticDir = '/static';
+const app = module.exports = express();
 
-app.configure(function () {
-  app.set('port', process.env.PORT || 9002);
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'pug');
-  app.use(express.favicon(__dirname + '/favicon.ico'));
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
+app.use(favicon(__dirname + '/favicon.ico'));
+app.use(require('connect-less')({
+  src: __dirname + '/style/',
+  dst: __dirname + staticDir + '/',
+  dstRoot: __dirname,
+  compress: app.get('env') === 'production'
+}));
+app.use(staticDir, express['static'](__dirname + staticDir, {maxAge: 1000 * 60 * 60 * 24 * 365}));
+app.use(logger('dev'));
 
-  app.use(require('connect-less')(lessConfig));
-
-  app.use(staticDir, express['static'](__dirname + staticDir, {maxAge: 1000 * 60 * 60 * 24 * 365}));
-  app.use(express.logger('dev'));
-  app.use(app.router);
-});
-
-// Routes
+// Route
 var tabs = lib.buildSubs({'Intro': {}, 'Skills': {}, 'Examples': {}, 'CV': {}, 'Contact': {}});
 
 Object.keys(tabs).forEach(function (tabid) {
@@ -77,6 +67,7 @@ app.get('/:tab?/:sub?', function (req, res, next) {
   });
 });
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port %d in %s mode", app.get('port'), app.get('env'));
+const port = process.env.PORT || 9002
+http.createServer(app).listen(port, function(){
+  console.log("Express server listening on port %s in %s mode", port, app.get('env'));
 });
