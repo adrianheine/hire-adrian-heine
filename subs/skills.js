@@ -69,7 +69,7 @@ module.exports = {
     desc: 'Dovecot together with ' + linkTo('Postfix') + ' powers my self-administered mail server used by a small handful of people.'
   }, 'Ender.js': {
     score: 0 + 1,
-    desc: 'I recently started using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ', Ender.js with the jeesh and reqwest is used for DOM manipulation and XHRs.'
+    desc: 'I tried using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ', Ender.js with the jeesh and reqwest was used for DOM manipulation and XHRs.'
   }, 'ESLint': {
     score: 1 + 1
   }, 'Etherpad lite': {
@@ -110,9 +110,9 @@ module.exports = {
   }, 'I18n': {
     score: 1 + 1,
     desc: 'I like the challenges that come from supporting more than ASCII letters written from left to right.'
-  }, 'Jade': {
+  }, 'Pug': {
     score: 1 + 2,
-    desc: 'I use Jade in my ' + linkTo('Node.js') + ' web applications together with ' + linkTo('Express') + '. I even got a <a href="https://github.com/visionmedia/jade/commit/bef63b3ebadfcbf2b079831e58d3b959123bd5ce" title="My patch for Jade">small patch</a> landed.'
+    desc: 'I used Pug when it was called Jade in my ' + linkTo('Node.js') + ' web applications together with ' + linkTo('Express') + '. I even got a <a href="https://github.com/visionmedia/jade/commit/bef63b3ebadfcbf2b079831e58d3b959123bd5ce" title="My patch for Jade">small patch</a> landed.'
   }, 'Java': {
     score: 0 + 2,
     desc: 'During my studies I made big contributions to a ' + linkTo('JVM') + ' targetting embedded systems. Among other changes, I reviewed and implemented big parts of the Java standard library. Since then I did not do any bigger Java coding.'
@@ -126,7 +126,7 @@ module.exports = {
     desc: 'During my studies I made big contributions to a ' + linkTo('C', 'C-based') + ' JVM targetting embedded systems. For this work I read the whole JVM Spec several times.'
   }, 'jQuery': {
     score: 2 + 2,
-    desc: 'I use jQuery for most of my client-side JavaScript needs. In 2011, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. For ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I started using ' + linkTo('Ender.js') + ' as a replacement.'
+    desc: 'I use jQuery for most of my client-side JavaScript needs. In 2011, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. For ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I checked out ' + linkTo('Ender.js') + ' as a replacement.'
   }, 'jQuery UI': {
     score: 2 + 3,
     desc: linkTo('MediaWiki') + ' and ' + linkTo('Wikibase') + ' use jQuery UI a lot. I have extensive experience fighting it and the bad code architecture it\'s widget system suggests. Also, ' + linkTo('DokuWiki', 'DokuWiki’s') + ' new ' + linkTo('JavaScript') + ' code uses jQuery UI for some elements.'
@@ -163,7 +163,7 @@ module.exports = {
     score: 1 + 1
   }, 'Node.js': {
     score: 2 + 1,
-    desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Jade') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' + linkTo('Meteor') + '.'
+    desc: 'I love Node.js and use it for all my recent web development and scripting needs. For a client, I rewrote I/O-heavy ' + linkTo('PHP') + ' components of his server using Node.js. I’ve done some ' + linkTo('Etherpad lite') + ' hacking, and I wrote ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ' and several other, unreleased projects using Node.js. When writing Web apps, I use ' + linkTo('Express') + ' and ' + linkTo('Pug') + '. I am constantly evaluating ' + linkTo('Derby.js') + ' and ' + linkTo('Meteor') + '.'
   }, 'nginx': {
     score: 2 + 1, // 3 (1)
     desc: 'I use nginx for all my web server needs. It proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'

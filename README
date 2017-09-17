@@ -29,9 +29,9 @@ subpages may have additional properties. Subpages are defined in separate JS
 files in the `subs` directory: If no file corresponding to a tab exists, the
 tab has no subpages.
 
-HTML is generated from Jade templates in the `views` directory. Every tab has
+HTML is generated from Pug templates in the `views` directory. Every tab has
 an own template file, there is a layout file and tabs with subpages have an
-additional `tab_subs.jade` file for the subpage content rendering. This setup
+additional `tab_subs.pug` file for the subpage content rendering. This setup
 works best where the whole tab content is visible on subpages as well.
 
 The response sent to a client heavily depends on the passed `Accept` header:
@@ -55,7 +55,7 @@ such that internal navigation works without page reloads by cleverly retrieving
 the needed page content via XHR and inserting it in-place. document location,
 title and browsing history are handled correctly. The script makes use of the
 aforementioned personal mime types to specify which representation of a tab or
-subpage it needs. jQuery is used for DOM manipulation and XHR.
+subpage it needs. No library is used for DOM manipulation or XHR.
 
 [HTML]
 The HTML uses HTML5‘s new, semantic elements. It’s quite straight-forward and
