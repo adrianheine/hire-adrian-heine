@@ -8,7 +8,9 @@ var lib = require('../lib'),
  * Hipness (0-1) (Whatever, Paint it big!)
  */
 module.exports = {
-  'Agile': {
+  'ACME': {
+    score: 1 + 1
+  }, 'Agile': {
     score: 2 + 1,
     desc: ''
   }, 'Angular': {
@@ -22,12 +24,16 @@ module.exports = {
     desc: 'During my studies I made several contributions to a ' + linkTo('C', 'C-based') + ' ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting Atmel systems.'
   }, 'Backbone.js': {
     score: 1 + 1
+  }, 'Bootstrap': {
+    score: 1 + 1
   }, 'C': {
     score: 1 + 2,
     desc: 'I read and write C code for more than 10 years. The biggest project I participated in was a C-based ' + linkTo('JVM', 'Java Virtual Machine') + ' targetting ' + linkTo('Atmel') + ' systems. I haven’t been much of a C hacker lately, but I’m still used to browsing through and editing code like the ' + linkTo('PHP') + ' interpreter or other C-based monsters.'
   }, 'CakePHP': {
     score: 0 + 2,
     desc: 'CakePHP 1.3 is something I had to use for a customer. I know how to use it, how to look something up in the source or documentation and how to stay alive.'
+  }, 'CodeMirror': {
+    score: 2 + 2
   }, 'CoffeeScript': {
     score: 0 + 2
   }, 'Compound.js': {
@@ -64,6 +70,8 @@ module.exports = {
   }, 'Ender.js': {
     score: 0 + 1,
     desc: 'I recently started using Ender.js-based component builds as a replacement for monolithic libraries like ' + linkTo('jQuery') + '. On ' + linkTo(['Examples', 'Hire Adrian Heine'], 'this site') + ', Ender.js with the jeesh and reqwest is used for DOM manipulation and XHRs.'
+  }, 'ESLint': {
+    score: 1 + 1
   }, 'Etherpad lite': {
     score: 0 + 2,
     desc: 'I run an Etherpad lite instance, contributed ' + linkTo('DokuWiki') + ' export and fixed a security issue. In 2012, I wrote a custom single sign-on adapter for an etherpad lite instance.'
@@ -111,6 +119,8 @@ module.exports = {
   }, 'JavaScript': {
     score: 2 + 3 + 1,
     desc: 'I love JavaScript for its ubiquity and flexibility. I use it for server- and client-side web programming and for scripting, occasionally, but I’ve done desktop programming with ' + linkTo('Titanium', 'Titanium Appcelerator') + ' as well.'
+  }, 'Jenkins': {
+    score: 1 + 1
   }, 'JVM': {
     score: 0 + 2,
     desc: 'During my studies I made big contributions to a ' + linkTo('C', 'C-based') + ' JVM targetting embedded systems. For this work I read the whole JVM Spec several times.'
@@ -136,6 +146,8 @@ module.exports = {
     desc: 'I used LESS for ' + linkTo(['Examples', 'Hire Adrian Heine']) + ' and once migrated ' + linkTo('DokuWiki', 'DokuWiki’s') + ' custom ' + linkTo('CSS') + ' build system to lessphp as an experiment.'
   }, 'MacOS X': {
     score: 1 + 0
+  }, 'MariaDB': {
+    score: 1 + 1
   }, 'MediaWiki': {
     score: 2 + 3,
     desc: 'I have extensive experience running, using, hacking and extending MediaWiki.'
@@ -155,6 +167,8 @@ module.exports = {
   }, 'nginx': {
     score: 2 + 1, // 3 (1)
     desc: 'I use nginx for all my web server needs. It proxies my ' + linkTo('Node.js', 'Node.js-based') + ' sites, thin-powered ' + linkTo('Ruby on Rails') + ' applications and even ' + linkTo('PHP') + ' sites.'
+  }, 'npm': {
+    score: 2 + 1
   }, 'OAuth': {
     score: 0 + 2
   }, 'OpenMicroBlogging': {
@@ -196,6 +210,8 @@ module.exports = {
     score: 0 + 0
   }, 'Scrum': {
     score: 2 + 2
+  }, 'Sentry': {
+    score: 1 + 1
   }, 'Sequelize': {
     score: 0 + 1
   }, 'Sinon.js': {
