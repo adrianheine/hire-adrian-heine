@@ -3,10 +3,8 @@
 
 var skills = require('../subs/skills');
 
-console.log(Object.keys(skills).reduce(function (ret, skill) {
-  let data = skills[skill];
-  ret += (new Array(data.score + 2)).join(skill.replace(/ (.)/g, function (_, c) {
-    return c.toUpperCase();
-  }) + ' ');
-  return ret;
-}, '').replace(/(.{0,80}) /g, '$1\n'));
+let text = Object.keys(skills).reduce(
+  (ret, skill) => ret + (skill.replace(/ (.)/g, (_, c) => c.toUpperCase()) + ' ').repeat(skills[skill].score + 1),
+  ''
+).replace(/(.{0,80}) /g, '$1\n')
+console.log(text);
