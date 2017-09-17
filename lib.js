@@ -10,7 +10,7 @@ lib.html = function (str) {
     .replace(/"/g, '&quot;');
 };
 
-lib.id = item => item.toLowerCase().replace(/ /g, '_').replace(/[/.]/g, '-');
+lib.id = item => item.toLowerCase().replace(/ /g, '_').replace(/[/.]/g, '-').replace(/adv/g, 'a__');
 
 lib.longTitle = function (tab, title) {
   var parts = ['Hire Adrian Heine'];
