@@ -5,7 +5,7 @@ var skills = require('../subs/skills');
 
 console.log(Object.keys(skills).reduce(function (ret, skill) {
   let data = skills[skill];
-  ret += (new Array(data.score + 1)).join(skill.replace(/ (.)/g, function (_, c) {
+  ret += (new Array(data.score + 2)).join(skill.replace(/ (.)/g, function (_, c) {
     return c.toUpperCase();
   }) + ' ');
   return ret;

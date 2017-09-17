@@ -6,7 +6,7 @@ block content
   h2 Skills
   ul.tagcloud.focussable
     each opts, skill in tabs[cur_t].subs
-      li(class='t' + opts.score)
+      li(class='t' + (opts.score + 1))
         a(href='/skills/' + skill,title='Hire Adrian Heine | Skills | ' + opts.title)
           != opts.title.replace(/ /g, '&nbsp;')
         | 
