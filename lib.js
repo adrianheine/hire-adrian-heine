@@ -2,15 +2,6 @@
 
 var lib = module.exports;
 
-lib.firstRes = function (items, test_func) {
-  var res = null;
-  items.some(function (item) {
-    res = test_func(item);
-    return res;
-  });
-  return res;
-};
-
 lib.html = function (str) {
   return str.replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -19,9 +10,7 @@ lib.html = function (str) {
     .replace(/"/g, '&quot;');
 };
 
-lib.id = function (item) {
-  return item.toLowerCase().replace(/ /g, '_').replace(/[/.]/g, '-');
-};
+lib.id = item => item.toLowerCase().replace(/ /g, '_').replace(/[/.]/g, '-');
 
 lib.longTitle = function (tab, title) {
   var parts = ['Hire Adrian Heine'];
@@ -34,9 +23,7 @@ lib.longTitle = function (tab, title) {
   return parts.join(' | ');
 };
 
-lib.mimeType = function (subtype) {
-  return 'application/prs.de.adrianlang.hire.' + subtype;
-};
+lib.mimeType = subtype => 'application/prs.de.adrianlang.hire.' + subtype;
 
 lib.linkTo = function (def, path, txt) {
   if (typeof path === 'string') {
@@ -62,7 +49,7 @@ lib.buildSubs = function (tab, items) {
     items = tab;
   }
 
-  return Object.keys(items).reduce(function (ret, item) {
+  return Object.keys(items).reduce((ret, item) => {
     let data = items[item];
     ret[lib.id(item)] = Object.assign({
       title: item,

@@ -56,9 +56,7 @@ app.get('/:tab?/:sub?', function (req, res, next) {
   }
 
   if (!req.accepts('html')) {
-    fragment = lib.firstRes(['focus', 'tab'], function (type) {
-      return req.accepts(lib.mimeType(type)) && type;
-    });
+    fragment = ['focus', 'tab'].find(type => req.accepts(lib.mimeType(type)));
   }
 
   res.header('Vary', 'Accept');

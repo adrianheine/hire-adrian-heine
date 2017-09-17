@@ -19,15 +19,14 @@
     "connect-less": ""
   },
   "devDependencies": {
-    "eslint": "^4.6.1",
-    "mocha": "^3.5.3"
+    "eslint": "^4.6.1"
   },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
   },
   "scripts": {
-    "test": "eslint . && mocha -R spec"
+    "test": "eslint ."
   },
   "keywords": [
     "cv"
