@@ -17,7 +17,7 @@
       }
 
       var oReq = new XMLHttpRequest();
-      oReq.addEventListener("load", () => {
+      oReq.addEventListener("load", function () {
         // Make sure that we got the right thing
         var received_mime = oReq.getResponseHeader('Content-Type');
         if (received_mime.substr(0, mime.length + 1) !== mime + ';') {
@@ -32,10 +32,13 @@
           document.title = title;
         }
 
-        let active_tab = document.querySelector('nav a.active');
-        if (active_tab) active_tab.classList.remove('active');
-        if (url_parsed[1])
+        var active_tab = document.querySelector('nav a.active');
+        if (active_tab) {
+          active_tab.classList.remove('active');
+        }
+        if (url_parsed[1]) {
           document.querySelector('nav a[href="/' + url_parsed[1] + '"]').classList.add('active');
+        }
 
         last_loaded = url_parsed[1];
       });
@@ -72,10 +75,16 @@
 
   document.body.addEventListener('click', function (e) {
     var a = e.target;
-    while (a && a.tagName !== 'A') a = a.parentNode;
-    if (!a) return;
+    while (a && a.tagName !== 'A') {
+      a = a.parentNode;
+    }
+    if (!a) {
+      return;
+    }
     var url = a.getAttribute('href');
-    if (!url.match(/^\//)) return;
+    if (!url.match(/^\//)) {
+      return;
+    }
     if (e.ctrlKey || e.shiftKey || e.altKey) {
       return;
     }
