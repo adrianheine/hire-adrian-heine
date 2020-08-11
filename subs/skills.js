@@ -9,7 +9,7 @@ var lib = require('../lib'),
  */
 module.exports = {
   'ACME': {
-    score: 1 + 1
+    score: 1 + 2
   }, 'Agile': {
     score: 2 + 1,
     desc: ''
@@ -125,10 +125,10 @@ module.exports = {
     score: 0 + 2,
     desc: 'During my studies I made big contributions to a ' + linkTo('C', 'C-based') + ' JVM targetting embedded systems. For this work I read the whole JVM Spec several times.'
   }, 'jQuery': {
-    score: 2 + 2,
-    desc: 'I use jQuery for most of my client-side JavaScript needs. In 2011, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. For ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I checked out ' + linkTo('Ender.js') + ' as a replacement.'
+    score: 1 + 2,
+    desc: 'I used jQuery for most of my client-side JavaScript needs. In 2011, I helped migrating ' + linkTo('DokuWiki', 'DokuWiki’s') + ' JavaScript code to jQuery and ' + linkTo('jQuery UI') + '. A ' + linkTo('Titanium', 'Titanium Desktop') + ' XML editing application I wrote made heavy use of jQuery. For ' + linkTo(['Examples', 'Hire Adrian Heine']) + ', I checked out ' + linkTo('Ender.js') + ' as a replacement.'
   }, 'jQuery UI': {
-    score: 2 + 3,
+    score: 1 + 3,
     desc: linkTo('MediaWiki') + ' and ' + linkTo('Wikibase') + ' use jQuery UI a lot. I have extensive experience fighting it and the bad code architecture it\'s widget system suggests. Also, ' + linkTo('DokuWiki', 'DokuWiki’s') + ' new ' + linkTo('JavaScript') + ' code uses jQuery UI for some elements.'
   }, 'Kohana': {
     score: 0 + 1
@@ -205,7 +205,7 @@ module.exports = {
   }, 'Ruby on Rails': {
     score: 0 + 1
   }, 'Rust': {
-    score: 1 + 1
+    score: 2 + 2
   }, 'Scala': {
     score: 0 + 0
   }, 'Scrum': {
@@ -237,7 +237,7 @@ module.exports = {
   }, 'Twitter Bootstrap': {
     score: 1 + 2
   }, 'Underscore.js': {
-    score: 1 + 2,
+    score: 1 + 1,
     desc: 'Not much to say about it: it’s great, I use it.'
   }, 'vim': {
     score: 2 + 1,
@@ -248,7 +248,7 @@ module.exports = {
     score: 0 + 0
   }, 'Wikibase': {
     score: 2 + 3,
-    desc: 'I am one of the main developers of Wikibase.'
+    desc: 'I used to be one of the main developers of Wikibase.'
   }, 'Wikidata': {
     score: 1 + 1
   }, 'Wikipedia': {
