@@ -4,6 +4,8 @@ env:
   es6: true
   node: true
 extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 8
 rules:
   accessor-pairs: error
   array-bracket-newline: error
@@ -44,7 +46,6 @@ rules:
     - property
   dot-notation:
     - error
-    - allowKeywords: false
   eol-last: error
   eqeqeq: error
   for-direction: error

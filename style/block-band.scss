@@ -1,5 +1,5 @@
 .block-band {
-    background-color: @secondaryDark;
+    background-color: $secondaryDark;
     padding: 0 10%;
 
     ul {
@@ -17,7 +17,7 @@
 
     .li {
         display: block;
-        background-color: @secondaryDark;
+        background-color: $secondaryDark;
         padding: 0.25em 0.5em;
         text-align: center;
         font-size: 1.2em;
@@ -25,7 +25,7 @@
 
     .li:focus,
     .li:hover {
-        background-color: @secondaryDarker;
-        color: @secondaryLighter;
+        background-color: $secondaryDarker;
+        color: $secondaryLighter;
     }
 }

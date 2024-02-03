@@ -44,7 +44,7 @@ footer {
     margin: 0.6666em 0;
     vertical-align: top;
     list-style: none;
-    border-left: 1px solid @primaryDark;
+    border-left: 1px solid $primaryDark;
     min-width: 10em;
-    .box-sizing(border-box);
+    @include box-sizing(border-box);
 }

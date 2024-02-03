@@ -5,12 +5,12 @@
 }
 
 .content a {
-    text-decoration: underline @secondaryDark;
+    text-decoration: underline $secondaryDark;
 }
 
 .content a:focus,
 .content a:hover {
-  text-decoration-color: @secondaryDarker;
+  text-decoration-color: $secondaryDarker;
 }
 
 .focussable,

@@ -8,15 +8,15 @@
 
     .li {
         display: block;
-        background-color: @primaryDark;
+        background-color: $primaryDark;
         padding: 0.25em 0.5em;
         font-size: 1.2em;
     }
 
     .li:focus,
     .li:hover {
-        background-color: @primaryDarker;
-        color: @primaryLighter;
+        background-color: $primaryDarker;
+        color: $primaryLighter;
     }
 
     .desc {

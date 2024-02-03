@@ -10,6 +10,6 @@ nav li {
 nav.block-band a.active,
 nav.block-band a.active:hover,
 nav.block-band a.active:focus {
-    color: @primaryDarker;
-    background-color: @primaryLight;
+    color: $primaryDarker;
+    background-color: $primaryLight;
 }

@@ -13,9 +13,8 @@
     "test": "test"
   },
   "dependencies": {
-    "connect-less": "",
+    "sass": "^1.70",
     "express": "^4.17",
-    "less": "",
     "morgan": "^1.8.2",
     "pug": "",
     "serve-favicon": "^2.4.4"
@@ -25,7 +24,7 @@
   },
   "optionalDependencies": {},
   "engines": {
-    "node": "*"
+    "node": ">=14"
   },
   "scripts": {
     "test": "eslint ."

@@ -1,13 +1,13 @@
-@primaryLighter: white;
-@primaryLight: #FCF6EE;
-@primaryDark: #EFD09E;
-@primaryDarker: #513415;
+$primaryLighter: white;
+$primaryLight: #FCF6EE;
+$primaryDark: #EFD09E;
+$primaryDarker: #513415;
 
 // Secondary is the same as primary
-@secondaryLighter: white;
-@secondaryLight: #FCF6EE;
-@secondaryDark: #EFD09E;
-@secondaryDarker: #513415;
+$secondaryLighter: white;
+$secondaryLight: #FCF6EE;
+$secondaryDark: #EFD09E;
+$secondaryDarker: #513415;
 
 @import "util";
 
