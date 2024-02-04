@@ -9,6 +9,7 @@ footer {
         .li {
             border-inline-start: 1px dashed $primaryDarker;
             padding-block: 0.1rem;
+            white-space: nowrap;
         }
     }
 

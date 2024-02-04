@@ -13,11 +13,11 @@
         flex-wrap: wrap;
 
         li {
-            flex-grow: 1;
+            flex: 1;
         }
 
         li.twice {
-            flex-grow: 2;
+            flex: 2.04; /* Account for the missing gap */
         }
     }
 
