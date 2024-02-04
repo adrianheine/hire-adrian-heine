@@ -5,7 +5,9 @@
     .focus-link
       a.ico.github(href='https://github.com/' + tabs.examples.subs[sub].links.github, title=tabs.examples.subs[sub].title + ' on GitHub') #{tabs.examples.subs[sub].title}
       |&nbsp;on&nbsp;GitHub
-  - if (tabs.examples.subs[sub].links.gitorious)
+  - if (tabs.examples.subs[sub].links.live)
     .focus-link
-      a.ico.gitorious(href='https://gitorious.org/' + tabs.examples.subs[sub].links.gitorious, title=tabs.examples.subs[sub].title + ' on Gitorious') #{tabs.examples.subs[sub].title}
-      |&nbsp;on&nbsp;Gitorious
+      a(href=tabs.examples.subs[sub].links.live, title=tabs.examples.subs[sub].title) #{tabs.examples.subs[sub].title}
+  - if (tabs.examples.subs[sub].links.git)
+    .focus-link
+      a(href=tabs.examples.subs[sub].links.git, title=tabs.examples.subs[sub].title) git repository

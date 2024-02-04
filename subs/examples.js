@@ -4,28 +4,28 @@ var lib = require('../lib'),
   linkTo = lib.linkTo.bind(undefined, 'Examples');
 
 module.exports = {
-  'Advertisement generator': {
-    desc: 'In <time>2012</time>, I wrote two interactive advertisement widgets and a generator for those widgets for a major online store.</p><p>The generator was implemented as a server-less single-page app with ' + linkTo(['Skills', 'Bootstrap']) + '. I used ' + linkTo(['Skills', 'Grunt.js']) + ' for automating the build process which included building the widgets and the generator from a common configuration as well as linting and compressing the ' + linkTo(['Skills', 'JavaScript']) + ' and ' + linkTo(['Skills', 'CSS']) + ' ressources.</p><p>The ad widgets were interactive and dynamically loaded product data from the live server. The widget size was fully configurable, and the content and layout ' + linkTo(['Skills', 'Responsive'], 'responded') + ' to the size. They had working fallback modes for users without JavaScript enabled and behaved and looked well in every browser down till Internet Explorer 7. At the same time, the compressed total JavaScript source for the widgets weighted 10 kB and 11 kB, respectively.',
-    links: {},
-    year: 2012,
-    shortdesc: 'serverless singlepage responsive'
-  },
   'Hire Adrian Heine': {
-    desc: 'I built »Hire Adrian Heine« in <time datetime="2012-01">January 2012</time>. It is powered by a ' + linkTo(['Skills', 'Node.js']) + ' server using the ' + linkTo(['Skills', 'Express'], 'Express web framework') + ' with ' + linkTo(['Skills', 'Pug'], 'Pug templates') + ' and proxied by a ' + linkTo(['Skills', 'nginx']) + ' on a ' + linkTo(['Skills', 'Debian']) + ' server. I initially used ' + linkTo(['Skills', 'Ender.js']) + ' but since moved to plain browser APIs. An example is the ' + linkTo(['Skills', 'HTML5'], 'HTML5 History API') + ' that I use for providing a smoother navigation in modern browsers.</p><p>Sketching, doing a concept, coding and writing the texts took me about 20 hours.',
+    desc: 'I built »Hire Adrian Heine« in <time datetime="2012-01">January 2012</time>. It is powered by a ' + linkTo(['Skills', 'Node.js']) + ' server using the ' + linkTo(['Skills', 'Express'], 'Express web framework') + ' with ' + linkTo(['Skills', 'Pug'], 'Pug templates') + ' and proxied by ' + linkTo(['Skills', 'nginx']) + ' on a ' + linkTo(['Skills', 'Debian']) + ' server. I initially used ' + linkTo(['Skills', 'Ender.js']) + ' but since moved to plain browser APIs.</p><p>I used ' + linkTo(['Skills', 'LESS']) + ' for ' + linkTo(['Skills', 'CSS']) + ' generation. The style has certain ' + linkTo('Responsive', 'responsive design') + ' features. For those, I did not use pixel- or device-based breakpoints, but rather went <a href="http://www.jordesign.com/blog/responsive-breakpoints-from-the-content-out/" title="Jordesign on »Responsive Breakpoints from the Content Out«">from the content out</a>.</p><p>In <time datetime="2024-02">2024</time>, I updated the styling to modern CSS, introducing fluid typography and implicit responsiveness without breakpoints. For this, I took advantage of viewport units and flexbox. I also switched to ' + linkTo(['Skills', 'Sass']) + '.',
     links: {github: 'adrianheine/hire-adrian-heine'},
-    year: 2012,
-    shortdesc: 'nodejs responsive'
+    year: '2012/2024',
+    shortdesc: 'nodejs vanillajs (s)css'
   },
-  'partial.js': {
-    desc: 'Partial.js is a toolkit for partial function application in ' + linkTo(['Skills', 'JavaScript']) + '. I wrote a <a href="https://ada.adrianlang.de/partial-application-js" title="The blog post »Partial function application in JavaScript«">blog post</a> on this subject in <time datetime="2011-06">June 2011</time> and did two <a href="https://adrianlang.de/talks/partial2.pdf" title="Talk on partial function application in JavaScript">talks</a> on partial function application in JavaScript and partial.js at the Berlin and Hamburg JavaScript user groups.',
-    links: {github: 'adrianheine/partial-js'},
-    year: 2011,
-    shortdesc: 'js library functional talks blogpost'
+  'Memory des Prekariats': {
+    desc: 'I co-developed this little game in the course of a hackathon. It features a small handwritten route-based action dispatcher, performant view updates through diffDOM and physics-simulated elements using Springy.js.',
+    links: { live: 'https://memory.adrianheine.de', git: 'https://git.adrianheine.de/adrian/coding-precarity' },
+    year: 2020,
+    shortdesc: 'vanillajs singleplage css'
   },
-  'libomb': {
-    desc: 'libomb is a ' + linkTo(['Skills', 'PHP']) + ' library implementing the ' + linkTo(['Skills', 'OpenMicroBlogging'], 'OpenMicroBlogging protocol') + '. I wrote it in <time datetime="2009">Summer 2009</time> and used it to replace the self-baked OMB implementation in ' + linkTo(['Skills', 'StatusNet']) + '.',
-    links: {gitorious: 'libomb'},
-    year: 2009,
-    shortdesc: 'php library communication'
+  'gntag': {
+    desc: 'gntag is a sample project demonstrating my ' + linkTo(['Skills', 'Rust']) + ' skills. It is a simple actor-based simulation of the tag game with a terminal user interface.',
+    links: { git: 'https://git.adrianheine.de/adrian/gntag' },
+    year: 2021,
+    shortdesc: 'rust tui agent-based'
+  },
+  'Space-Board': {
+    desc: 'Space-Board is a sample project demonstrating my ' + linkTo(['Skills', 'Vue.js']) + ' and ' + linkTo(['Skills', 'CSS']) + ' skills. The CSS implementation makes use of grid, flexbox, logical units and values, dynamic viewport units, fluid typography, media feature detection and container queries. It implements a mobile-first responsive design with four breakpoints. There are several state transitions and custom shaky, glitchy and flickering animations. The whole project with six functional widgets is implemented in less than 300 lines of JavaScript and less than 500 lines of CSS.',
+    links: {github: 'adrianheine/space-board'},
+    year: 2024,
+    shortdesc: 'vuejs singlepage css'
   }
 };

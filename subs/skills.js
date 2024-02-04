@@ -214,6 +214,8 @@ module.exports = {
     when: 2014, depth: 1
   }, 'Rust': {
     when: 2023, depth: 2
+  }, 'Sass': {
+    when: 2024, depth: 1
   }, 'Scala': {
     when: 2013, depth: 0
   }, 'Scrum': {
