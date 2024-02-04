@@ -30,3 +30,24 @@
         text-align: right;
     }
 }
+
+.cv {
+  dl {
+      margin: 0;
+      border-inline-start: dashed 1px;
+      padding-inline-start: 0.5rem;
+  }
+
+  dd {
+      padding-block-end: 0.5rem;
+  }
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  > * {
+    flex: 1;
+  }
+}
