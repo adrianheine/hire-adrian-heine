@@ -7,11 +7,12 @@ block content
     h2 Skills
     ul.tagcloud
       each opts, skill in tabs[cur_t].subs
-        li(class='t' + (opts.score + 1))
+        li(class='t' + (opts.depth + 1) + ' age' + opts.age)
           if opts.desc
             a(href='/skills/' + skill,title='Hire Adrian Heine | Skills | ' + opts.title)
               != opts.title.replace(/ /g, '&nbsp;')
             | 
           else
-            != opts.title.replace(/ /g, '&nbsp;')
+            span
+              != opts.title.replace(/ /g, '&nbsp;')
             | 

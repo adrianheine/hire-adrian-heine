@@ -1,55 +1,90 @@
+@use 'sass:color';
+
 .tagcloud {
     list-style: none;
-    text-align: justify;
-    line-height: 1em;
+    text-align: center;
+    line-height: 0.8rem;
     padding: 0;
     margin: 0;
+    cursor: default; /* I don't want any I-beams */
+
+    li {
+        display: inline;
+        position: relative;
+        transition: all 0.4s linear;
+        font-size: max(0.5rem, calc(var(--font-size) * var(--age-factor)));
+    }
+
+    li:hover {
+        opacity: 1;
+        text-shadow: none;
+        z-index: 30; /* Transition looks better with such a high value */
+    }
+
+    li > * {
+        border-radius: 0.2em;
+        padding: 0.1em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: underline $primaryDark;
+    }
+
+    .t1 {
+        --font-size: 0.7em;
+    }
+    .t2 {
+        --font-size: 1em;
+    }
+    .t3 {
+        --font-size: 1.3em;
+    }
+    .t4 {
+        --font-size: 2em;
+    }
+
+    .age0 {
+        z-index: 5;
+        --age-factor: 1.1;
+    }
+
+    .age1 {
+        z-index: 4;
+        opacity: 0.8;
+        text-shadow: 0 0 1px;
+        --age-factor: 1;
+    }
+
+    .age2 {
+        z-index: 3;
+        opacity: 0.6;
+        text-shadow: 0 0 2px;
+        --age-factor: 0.9;
+    }
+
+    .age3 {
+        z-index: 2;
+        opacity: 0.4;
+        text-shadow: 0 0 3px;
+        --age-factor: 0.8;
+    }
+
+    .age4 {
+        z-index: 1;
+        opacity: 0.2;
+        text-shadow: 0 0 4px;
+        --age-factor: 0.7;
+    }
+
+    .age5 {
+        opacity: 0.1;
+        text-shadow: 0 0 5px;
+        --age-factor: 0.6;
+    }
 }
 
-.tagcloud li {
-    display: inline;
-    position: relative;
-    cursor: default;
-}
-
-.tagcloud a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.tagcloud a:focus,
-.tagcloud a:hover {
-    text-decoration: underline;
-    color: inherit;
-}
-
-.tagcloud .t1 {
-    font-size: 0.5em;
-    z-index: 6;
-}
-.tagcloud .t2 {
-    font-size: 0.6em;
-    z-index: 5;
-}
-.tagcloud .t3 {
-    font-size: 0.8em;
-    z-index: 4;
-}
-.tagcloud .t4 {
-    font-size: 1.0em;
-    z-index: 3;
-}
-.tagcloud .t5 {
-    font-size: 1.2em;
-    z-index: 2;
-}
-.tagcloud .t6 {
-    font-size: 1.5em;
-    z-index: 1;
-}
-.tagcloud .t7 {
-    font-size: 2em;
-}
-.tagcloud .t8 {
-    font-size: 2.5em;
-}
