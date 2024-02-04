@@ -14,6 +14,9 @@ $secondaryDarker: #513415;
 @import "base";
 
 // Layouts
+header {
+  margin-block-end: 2rem;
+}
 @import "nav";
 @import "content";
 @import "footer";

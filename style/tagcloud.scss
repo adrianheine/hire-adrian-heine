@@ -2,11 +2,14 @@
     list-style: none;
     text-align: justify;
     line-height: 1em;
+    padding: 0;
+    margin: 0;
 }
 
 .tagcloud li {
     display: inline;
     position: relative;
+    cursor: default;
 }
 
 .tagcloud a {

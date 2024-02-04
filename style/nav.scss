@@ -1,15 +1,9 @@
-nav {
-    margin: 2em 0;
-}
-
-nav li {
-    width: 23%;
-    min-width: 7em;
-}
-
 nav.block-band a.active,
 nav.block-band a.active:hover,
-nav.block-band a.active:focus {
+nav.block-band a.active:focus
+{
     color: $primaryDarker;
     background-color: $primaryLight;
+    margin-block: -0.5rem;
+    padding-block: 0.75rem;
 }

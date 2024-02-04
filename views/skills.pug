@@ -3,10 +3,15 @@ extends layouted
 block content
   #focus.focus
       include skills_sub
-  h2 Skills
-  ul.tagcloud.focussable
-    each opts, skill in tabs[cur_t].subs
-      li(class='t' + (opts.score + 1))
-        a(href='/skills/' + skill,title='Hire Adrian Heine | Skills | ' + opts.title)
-          != opts.title.replace(/ /g, '&nbsp;')
-        | 
+  .focussable
+    h2 Skills
+    ul.tagcloud
+      each opts, skill in tabs[cur_t].subs
+        li(class='t' + (opts.score + 1))
+          if opts.desc
+            a(href='/skills/' + skill,title='Hire Adrian Heine | Skills | ' + opts.title)
+              != opts.title.replace(/ /g, '&nbsp;')
+            | 
+          else
+            != opts.title.replace(/ /g, '&nbsp;')
+            | 

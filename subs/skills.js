@@ -272,8 +272,3 @@ module.exports = {
     score: 0 + 0
   }
 };
-
-Object.keys(module.exports).forEach(function (skillName) {
-  let skill = module.exports[skillName];
-  skill.desc = skill.desc || 'No description yet, sorry.';
-});

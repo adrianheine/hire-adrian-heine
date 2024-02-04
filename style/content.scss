@@ -13,10 +13,14 @@
   text-decoration-color: $secondaryDarker;
 }
 
+.closing {
+    padding-left: 1em;
+}
+
 .focussable,
 .focus {
     width: 49%;
-    margin: 0 0 2em 0;
+    margin: 0 0 1rem 0;
     padding: 0;
 }
 
