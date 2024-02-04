@@ -1,13 +1,14 @@
 extends layouted
 
 block content
-  #focus.focus
-      include examples_sub
-  .focussable
-    h2 Examples
-    ul.big-links
-      each opts, example in tabs[cur_t].subs
-        li
-          a.li(href='/examples/' + example, title=opts.longTitle)
-            | #{opts.year}: #{opts.title}
-            span.desc #{opts.shortdesc}
+  .focus-container
+    #focus.focus
+        include examples_sub
+    .focussable
+      h2 Examples
+      ul.big-links
+        each opts, example in tabs[cur_t].subs
+          li
+            a.li(href='/examples/' + example, title=opts.longTitle)
+              | #{opts.year}: #{opts.title}
+              span.desc #{opts.shortdesc}

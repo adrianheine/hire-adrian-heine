@@ -9,15 +9,3 @@
     padding-inline: 1vi;
     margin-inline: auto;
 }
-
-@media only screen and (max-width: 45em) {
-    /* Single-column */
-    .focus {
-        float: none;
-        width: auto;
-    }
-
-    .focussable {
-        width: 100%;
-    }
-}

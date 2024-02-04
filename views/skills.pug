@@ -1,18 +1,19 @@
 extends layouted
 
 block content
-  #focus.focus
-      include skills_sub
-  .focussable
-    h2 Skills
-    ul.tagcloud
-      each opts, skill in tabs[cur_t].subs
-        li(class='t' + (opts.depth + 1) + ' age' + opts.age)
-          if opts.desc
-            a(href='/skills/' + skill,title='Hire Adrian Heine | Skills | ' + opts.title)
-              != opts.title.replace(/ /g, '&nbsp;')
-            | 
-          else
-            span
-              != opts.title.replace(/ /g, '&nbsp;')
-            | 
+  .focus-container
+    #focus.focus
+        include skills_sub
+    .focussable
+      h2 Skills
+      ul.tagcloud
+        each opts, skill in tabs[cur_t].subs
+          li(class='t' + (opts.depth + 1) + ' age' + opts.age)
+            if opts.desc
+              a(href='/skills/' + skill,title='Hire Adrian Heine | Skills | ' + opts.title)
+                != opts.title.replace(/ /g, '&nbsp;')
+              | 
+            else
+              span
+                != opts.title.replace(/ /g, '&nbsp;')
+              | 

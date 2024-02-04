@@ -11,19 +11,19 @@
     padding-left: 1em;
 }
 
+.focus-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 1%;
+}
+
 .focussable,
 .focus {
-    width: 49%;
-    margin: 0 0 1rem 0;
-    padding: 0;
-}
-
-.focussable {
-    display: inline-block;
+    flex: 1 1 19em;
 }
 
 .focus {
-    float: right;
     text-align: justify;
 
     .focus-link {
