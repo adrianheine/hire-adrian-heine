@@ -10,21 +10,24 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 1%;
-    }
+        flex-wrap: wrap;
 
-    li {
-        flex: 1;
+        li {
+            flex-grow: 1;
+        }
+
+        li.twice {
+            flex-grow: 2;
+        }
     }
 
     .li {
         display: block;
         padding: 0.25rem 0.5rem;
-        text-align: center;
-        font-size: 1.2rem;
     }
 
-    .li:focus,
-    .li:hover {
+    a.li:focus,
+    a.li:hover {
         background-color: $secondaryDarker;
         color: $secondaryLighter;
     }

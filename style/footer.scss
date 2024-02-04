@@ -2,49 +2,22 @@ footer {
     /* Content above floats for reordering */
     clear: both;
 
-    .block-band {
-        margin: 2em 0 1em 0;
+    font-size: 0.8rem;
+    margin: 2rem 0 1rem 0;
 
-        li {
-            width: 48%;
-            vertical-align: top;
+    .block-band {
+        .li {
+            border-inline-start: 1px dashed $primaryDarker;
+            padding-block: 0.1rem;
         }
     }
 
     .license {
-        text-align: left;
-
-        height: 2em;
-
         img {
-            margin-top: 0.25em;
+            block-size: 1.5em;
+            inline-size: auto;
+            vertical-align: bottom;
+            padding-inline-end: 0.5rem;
         }
     }
-
-    .attribution .li {
-        text-align: right;
-    }
-}
-
-.tech-footer {
-    padding: 0 10%;
-    font-size: 0.8em;
-    line-height: 1.25em;
-    margin: 1.25em auto;
-}
-
-.tech-footer > li {
-    display: inline;
-}
-
-.tech-footer ul {
-    display: inline-block;
-    width: 25%;
-    padding: 0 1%;
-    margin: 0.6666em 0;
-    vertical-align: top;
-    list-style: none;
-    border-left: 1px solid $primaryDark;
-    min-width: 10em;
-    @include box-sizing(border-box);
 }

@@ -15,7 +15,9 @@ $secondaryDarker: #513415;
 
 // Layouts
 header {
-  margin-block-end: 2rem;
+    margin-block-end: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
 }
 @import "nav";
 @import "content";

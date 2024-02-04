@@ -1,22 +1,13 @@
 /* Give the whole page a max-width */
 .block-band ul,
 .content {
-    max-width: 48em;
+    max-width: 43rem;
 }
 
-.tech-footer {
-    max-width: 60em;
-}
-
-/*
- * Make sure that the tech-footer link texts do not wrap
- * ceil((10em / 0.20 / 0.8) * 0.8 * 1.125) = 57em
- * ceil((ul:min-width / ul:width / .tech-footer:padding) * :font-sizes)
- */
-@media only screen and (max-width: 57em) {
-    .tech-footer ul {
-        width: 50%;
-    }
+.block-band,
+.content {
+    padding-inline: 1vi;
+    margin-inline: auto;
 }
 
 @media only screen and (max-width: 45em) {
@@ -28,32 +19,5 @@
 
     .focussable {
         width: 100%;
-    }
-
-    /*
-     * Make sure that the nav links do not wrap
-     * 7em / 0.23 / 0.8 * 1.125 = 42.79em
-     */
-    nav li {
-        width: 48%;
-    }
-}
-
-@media only screen and (max-width: 35em) {
-    /* Make sure the footer looks ok */
-    footer .block-band li {
-        width: 98%;
-    }
-}
-
-/* Remove 10% padding */
-@media only screen and (max-width: 25em) {
-    .content {
-        margin: 1em;
-        width: auto;
-    }
-
-    .block-band, .tech-footer {
-        padding: 0;
     }
 }
